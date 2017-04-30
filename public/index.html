@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tengu Music App</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+    <div id="root">
+
+        <header class="container">
+            <div class="row">
+
+                <div class="page-header col-md-6">
+                    <h1>MelodyUnderdog</h1>
+                    <h3><small>Share links to underrated YouTube songs</small></h3>
+                </div>
+
+                <form class="form-inline col-md-6 hidden" id="container-sign-in">
+                    <div class="form-group pull-right">
+                        <label class="sr-only" for="tb-password">Password</label>
+                        <input type="password" class="form-control" id="tb-password" placeholder="Password">
+                    </div>
+                    <div class="form-group pull-right">
+                        <label class="sr-only" for="tb-username">Username</label>
+                        <input type="text" class="form-control" id="tb-username" placeholder="Username">
+                    </div>
+                    <div class="form-subgroup pull-right">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                        <a href="#/users/register"> or Register</a>
+                        <button id="btn-sign-in" class="btn btn-default">Sign in</button>
+                    </div>
+                </form>
+                <!--Sign out container-->
+                <form class="form-inline col-md-6 hidden" id="container-sign-out">
+                    <button id="btn-sign-out" class="btn btn-default pull-right">Sign out</button>
+                    <span id="signed-in-user" class="btn-success pull-right"></span>
+                </form>
+            </div>
+
+            <nav id="main-nav" class="navbar navbar-default hidden row">
+                <ul class="nav navbar-nav col-md-8">
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/videos">All Videos </a></li>
+                    <li><a href="#">My Videos</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="content" ></div>
+                </div>
+                <div class="col-md-4">
+                    <aside id="right">
+                        <input id="box-id" type="checkbox" class="with-font"/>
+                        <label for="box-id">Sample Checkbox</label>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+
+        </footer>
+    </div>
+
+    <!-- libs -->
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/handlebars/handlebars.js"></script>
+    <script src="./bower_components/sammy/lib/sammy.js"></script>
+    <script src="./bower_components/toastr/toastr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.4.1/sha1.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+
+    <!--module loader-->
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="./scripts/system-config.js"></script>
+    <script>
+        SystemJS.import('main');
+    </script>
+
+</body>
+</html>

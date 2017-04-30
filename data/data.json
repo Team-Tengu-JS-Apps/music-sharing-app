@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "username": "s",
+      "passHash": "c1c93f88d273660be5358cd4ee2df2c2f3f0e8e7",
+      "usernameLower": "s",
+      "authKey": "undefinedEmE&!b@=PpQ!TaCPKSOXwf&DRbwsQb#BwjujvCH(yWb_#xLgaFy",
+      "availableStars": 5,
+      "videos": [
+        {
+          "id": 399652,
+          "title": "",
+          "url": "",
+          "description": "",
+          "stars": 0
+        },
+        {
+          "id": 451435,
+          "title": "",
+          "url": "",
+          "description": "",
+          "stars": 0
+        },
+        {
+          "id": 463872,
+          "title": "",
+          "url": "",
+          "description": "",
+          "stars": 0
+        },
+        {
+          "id": 691142,
+          "title": "Some song",
+          "url": "https://www.youtube.com/watch?v=gnsO8-xJ8rs",
+          "description": "Not a song, really",
+          "stars": 0
+        },
+        {
+          "id": 906267,
+          "title": "Some other video",
+          "url": "aa",
+          "description": "aa",
+          "stars": 0
+        },
+        {
+          "id": 919275,
+          "title": "aaa",
+          "url": "aaa",
+          "description": "aaa",
+          "stars": 0
+        }
+      ],
+      "comments": [],
+      "id": "5c3c464c-dad1-4015-ac54-e7c91776720f"
+    }
+  ]
+}

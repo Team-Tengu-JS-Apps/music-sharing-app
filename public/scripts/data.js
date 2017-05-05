@@ -92,6 +92,17 @@ const dataService = (function () {
             });
     }
 
+    function getAllSongs() {
+        const options = {
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+        return jsonRequester.get('api/songs/all', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
 
     return {
         users: {
@@ -103,7 +114,8 @@ const dataService = (function () {
         },
         songs: {
             get: getSongs,
-            add: addSong
+            add: addSong,
+            all: getAllSongs
         }
     };
 }());

@@ -1,2 +1,8 @@
-<p>All songs here</p><br>
 <a id="add-song" type="button" class="btn btn-default" href="#/songs/add">Add</a>
+
+<ul id="all-songs" class="list-group">
+    {{#each all}}
+            <li class="list-group-item list-group-item-success">{{title}}<br>{{description}}</li>
+            <li class="list-group-item btn-default" data-url="{{url}}">Watch</li>
+    {{/each}}
+</ul>

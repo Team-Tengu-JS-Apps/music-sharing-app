@@ -5,18 +5,17 @@ import {templateLoader} from 'templates';
 const songsController = (function () {
 
     function all(context) {
-        let songs;
+        let result = {};
         const category = context.params.category || null;
-        dataService.songs.get()
-            .then(function (resSongs) {
-                songs = _.chain(resSongs)
-                    .groupBy(controllerHelpers.groupByCategory)
-                    .map(controllerHelpers.parseGroups).value();
-
+        dataService.songs.all()
+            .then(function (resp) {
+                let songs = resp.reduce((arr, x) => x.concat(arr), []);
+                songs = _.shuffle(songs);
+                result.all = songs;
                 return templateLoader.get('songs');
             })
             .then(function (template) {
-                context.$element().html(template(songs));
+                context.$element().html(template(result));
             })
             .catch(function (err) {
                 toastr.error(err.message);

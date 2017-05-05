@@ -12,7 +12,7 @@ import {songsController} from 'songs-controller';
         this.get('#/users', usersController.all);
         this.get('#/users/register', usersController.register);
 
-        this.get('#/songs', songsController.all);
+        this.get('#/songs/all', songsController.all);
         this.get('#/songs/add', songsController.add);
     });
 

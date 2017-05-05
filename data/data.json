@@ -6,7 +6,36 @@
       "usernameLower": "s",
       "authKey": "undefinedEmE&!b@=PpQ!TaCPKSOXwf&DRbwsQb#BwjujvCH(yWb_#xLgaFy",
       "availableStars": 5,
-      "songs": [],
+      "songs": [
+        {
+          "id": 794080,
+          "title": "My Awesome Song",
+          "url": "https://www.youtube.com/watch?v=ZF3-mHk5jJE",
+          "description": "Epic",
+          "stars": 0
+        },
+        {
+          "id": 12252,
+          "title": "Oh, Pepi",
+          "url": "https://www.youtube.com/watch?v=dlF1KxtArCg",
+          "description": "pepi",
+          "stars": 0
+        },
+        {
+          "id": 305008,
+          "title": "Oh, Pepi",
+          "url": "https://www.youtube.com/watch?v=dlF1KxtArCg",
+          "description": "pepi",
+          "stars": 0
+        },
+        {
+          "id": 319939,
+          "title": "Oh, Pepi 2",
+          "url": "https://www.youtube.com/watch?v=dlF1KxtArCg",
+          "description": "pepi",
+          "stars": 0
+        }
+      ],
       "comments": [],
       "id": "5c3c464c-dad1-4015-ac54-e7c91776720f"
     },
@@ -16,7 +45,22 @@
       "usernameLower": "ivan",
       "authKey": "undefinediJZcVuMrm#opLZcf+L^loSSCX!YYj(zJT)fHNH(AT@(rpP*=LVD",
       "availableStars": 5,
-      "songs": [],
+      "songs": [
+        {
+          "id": 403153,
+          "title": "Zara Larson",
+          "url": "https://www.youtube.com/watch?v=tD4HCZe-tew",
+          "description": "nashta Zara",
+          "stars": 0
+        },
+        {
+          "id": 518537,
+          "title": "Cheap Thrills",
+          "url": "https://www.youtube.com/watch?v=nYh-n7EOtMA",
+          "description": "My Favorite Song",
+          "stars": 0
+        }
+      ],
       "comments": [],
       "id": "d68dd0c7-be40-46bc-871a-d34356fd9b78"
     },
@@ -26,9 +70,18 @@
       "usernameLower": "d",
       "authKey": "undefinedVwb+VahMqlQf-Z*Uz#QeJzCpjbVn%swDc#qHHSfTL+m@Mfi(&#Q",
       "availableStars": 5,
-      "songs": [],
+      "songs": [
+        {
+          "id": 325994,
+          "title": "Some song",
+          "url": "https://www.youtube.com/watch?v=yTqrkJAosho",
+          "description": "Some description",
+          "stars": 0
+        }
+      ],
       "comments": [],
       "id": "03fecd7d-cf6e-47ae-9b86-0cb99ccc541a"
     }
-  ]
+  ],
+  "songs": []
 }

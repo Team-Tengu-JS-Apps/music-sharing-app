@@ -24,7 +24,8 @@ under the "watch video" box (slider). See also the initial design.png.
 Users and registration related, plus:
 
 * `#/` - Home page
-* `#/songs` - Get all songs
+* `#/songs` - Get all songs by user
+* `#/songs/all` - Get all songs
 * `#/songs/add` - Post new song item (title, description, link)
 * `#/songs/id` - Get a specific song item
 * `#/songs/id/rate` - Post stars/rate

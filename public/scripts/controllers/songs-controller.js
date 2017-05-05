@@ -2,21 +2,21 @@ import {controllerHelpers} from 'controller-helpers';
 import {dataService} from 'data';
 import {templateLoader} from 'templates';
 
-const videosController = (function () {
+const songsController = (function () {
 
     function all(context) {
-        let videos;
+        let songs;
         const category = context.params.category || null;
-        dataService.videos.get()
-            .then(function (resVideos) {
-                videos = _.chain(resVideos)
+        dataService.songs.get()
+            .then(function (resSongs) {
+                songs = _.chain(resSongs)
                     .groupBy(controllerHelpers.groupByCategory)
                     .map(controllerHelpers.parseGroups).value();
 
-                return templateLoader.get('videos');
+                return templateLoader.get('songs');
             })
             .then(function (template) {
-                context.$element().html(template(videos));
+                context.$element().html(template(songs));
             })
             .catch(function (err) {
                 toastr.error(err.message);
@@ -24,24 +24,24 @@ const videosController = (function () {
     }
 
     function add(context) {
-        templateLoader.get('videos-add')
+        templateLoader.get('song-add')
             .then(function (template) {
                 context.$element()
                     .html(template());
                 return Promise.resolve(true);
             })
             .then(function () {
-                $('#btn-video-add').on('click', function () {
-                    const video = {
-                        title: $('#tb-video-title').val(),
-                        url: $('#tb-video-url').val(),
-                        description: $('#tb-video-description').val()
+                $('#btn-song-add').on('click', function () {
+                    const song = {
+                        title: $('#tb-song-title').val(),
+                        url: $('#tb-song-url').val(),
+                        description: $('#tb-song-description').val()
                     };
 
-                    dataService.videos.add(video)
+                    dataService.songs.add(song)
                         .then(function (resp) {
-                            toastr.success(`Video "${video.title}" added!`);
-                            context.redirect('#/videos');
+                            toastr.success(`Song "${song.title}" added!`);
+                            context.redirect('#/songs');
                         });
                 });
             });
@@ -53,4 +53,4 @@ const videosController = (function () {
     };
 }());
 
-export {videosController};
+export {songsController};

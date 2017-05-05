@@ -1,7 +1,7 @@
 import {dataService} from 'data';
 import {homeController} from 'home-controller';
 import {usersController} from 'users-controller';
-import {videosController} from 'videos-controller';
+import {songsController} from 'songs-controller';
 
 (function () {
 
@@ -10,11 +10,10 @@ import {videosController} from 'videos-controller';
         this.get('#/', homeController.all);
 
         this.get('#/users', usersController.all);
-        this.get('#/users/register', usersController.createRegisterForm);
+        this.get('#/users/register', usersController.register);
 
-        this.get('#/videos', videosController.all);
-        this.get('#/videos/add', videosController.add);
-
+        this.get('#/songs', songsController.all);
+        this.get('#/songs/add', songsController.add);
     });
 
     $(function () {

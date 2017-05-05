@@ -1,7 +1,7 @@
 {
   "name": "tengu-music-app",
   "version": "1.0.0",
-  "description": "Video share application",
+  "description": "Music share application",
   "main": "index.js",
   "scripts": {
     "start": "node app.js"

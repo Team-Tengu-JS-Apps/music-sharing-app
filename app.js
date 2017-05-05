@@ -12,12 +12,12 @@ app.use(express.static('public'));
 app.use('/libs', express.static('node_modules'));
 
 var usersRouter = require('./routers/usersRouter')(db);
-var videosRouter = require('./routers/videosRouter')(db);
+var songsRouter = require('./routers/songsRouter')(db);
 
 require('./utils/authorized-user')(app, db);
 
 app.use('/api/users', usersRouter);
-app.use('/api/videos', videosRouter);
+app.use('/api/songs', songsRouter);
 
 var port = process.env.PORT || 3013;
 

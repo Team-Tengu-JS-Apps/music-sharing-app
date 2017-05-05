@@ -13,10 +13,10 @@ module.exports = function (db) {
                 .json('Not authorized User');
             return;
         }
-        var videos = user.videos;
+        var songs = user.songs;
 
         res.json({
-            result: videos
+            result: songs
         });
     })
         .post('/', function (req, res) {
@@ -27,7 +27,7 @@ module.exports = function (db) {
                 return;
             }
 
-            var video = {
+            var song = {
                 id: idGenerator.next(),
                 title: req.body.title,
                 url: req.body.url,
@@ -35,12 +35,12 @@ module.exports = function (db) {
                 stars: 0
             };
 
-            user.videos = user.videos || [];
-            user.videos.push(video);
+            user.songs = user.songs || [];
+            user.songs.push(song);
 
             res.status(201)
                 .json({
-                    result: video
+                    result: song
                 });
         })
         .put('/:id', function (req, res) {

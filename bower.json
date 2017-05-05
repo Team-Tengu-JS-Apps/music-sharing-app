@@ -1,9 +1,6 @@
 {
-  "name": "self-manager",
+  "name": "tengu-music-app",
   "version": "0.0.0",
-  "authors": [
-    "Doncho Minkov <DonchoMinkov@gmail.com>"
-  ],
   "license": "MIT",
   "ignore": [
     "**/.*",

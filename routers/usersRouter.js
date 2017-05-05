@@ -26,7 +26,7 @@ module.exports = function (db) {
             user.usernameLower = user.username.toLowerCase();
             user.authKey = authKeyGenerator.get(user.id);
             user.availableStars = 5;
-            user.videos = [];
+            user.songs = [];
             user.comments = [];
 
             if (db('users').find({

@@ -13,14 +13,10 @@ const usersController = function () {
             })
             .then(function (template) {
                 context.$element().html(template(users));
-                /*$('.btn-add-friend').on('click', function () {
-                    const id = $(this).parents('.user-box').attr('data-id');
-                    dataService.friends.sentRequest(id);
-                });*/
             });
     }
 
-    function createRegisterForm(context) {
+    function register(context) {
         templateLoader.get('register')
             .then(function (template) {
                 context.$element().html(template());
@@ -37,7 +33,7 @@ const usersController = function () {
                             return new Promise(function (resolve, reject) {
                                 setTimeout(function () {
                                     resolve(resp);
-                                }, 1000);
+                                }, 500);
                             });
                         }, function (resp) {
                             toastr.error(resp.responseJSON);
@@ -77,7 +73,7 @@ const usersController = function () {
 
     return {
         all,
-        createRegisterForm,
+        register,
         signOut,
         signIn
     };

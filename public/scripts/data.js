@@ -64,28 +64,29 @@ const dataService = (function () {
             });
     }
 
-    /* Videos */
-    function getVideos() {
+    /* Songs */
+
+    function getSongs() {
         const options = {
             headers: {
                 'x-auth-key': localStorage.getItem(AUTH_KEY)
             }
         };
-        return jsonRequester.get('api/videos', options)
+        return jsonRequester.get('api/songs', options)
             .then(function (resp) {
                 return resp.result;
             });
     }
 
-    function addVideo(video) {
+    function addSong(song) {
         const options = {
-            data: video,
+            data: song,
             headers: {
                 'x-auth-key': localStorage.getItem(AUTH_KEY)
             }
         };
 
-        return jsonRequester.post('api/videos', options)
+        return jsonRequester.post('api/songs', options)
             .then(function (resp) {
                 return resp.result;
             });
@@ -100,11 +101,11 @@ const dataService = (function () {
             hasUser,
             get: getUsers
         },
-        videos: {
-            get: getVideos,
-            add: addVideo
+        songs: {
+            get: getSongs,
+            add: addSong
         }
     };
 }());
 
-export { dataService };
+export {dataService};

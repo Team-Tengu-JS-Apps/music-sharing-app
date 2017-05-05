@@ -6,52 +6,29 @@
       "usernameLower": "s",
       "authKey": "undefinedEmE&!b@=PpQ!TaCPKSOXwf&DRbwsQb#BwjujvCH(yWb_#xLgaFy",
       "availableStars": 5,
-      "videos": [
-        {
-          "id": 399652,
-          "title": "",
-          "url": "",
-          "description": "",
-          "stars": 0
-        },
-        {
-          "id": 451435,
-          "title": "",
-          "url": "",
-          "description": "",
-          "stars": 0
-        },
-        {
-          "id": 463872,
-          "title": "",
-          "url": "",
-          "description": "",
-          "stars": 0
-        },
-        {
-          "id": 691142,
-          "title": "Some song",
-          "url": "https://www.youtube.com/watch?v=gnsO8-xJ8rs",
-          "description": "Not a song, really",
-          "stars": 0
-        },
-        {
-          "id": 906267,
-          "title": "Some other video",
-          "url": "aa",
-          "description": "aa",
-          "stars": 0
-        },
-        {
-          "id": 919275,
-          "title": "aaa",
-          "url": "aaa",
-          "description": "aaa",
-          "stars": 0
-        }
-      ],
+      "songs": [],
       "comments": [],
       "id": "5c3c464c-dad1-4015-ac54-e7c91776720f"
+    },
+    {
+      "username": "Ivan",
+      "passHash": "2ee115dcb37bfaaa2ddb0286bed449476eb10735",
+      "usernameLower": "ivan",
+      "authKey": "undefinediJZcVuMrm#opLZcf+L^loSSCX!YYj(zJT)fHNH(AT@(rpP*=LVD",
+      "availableStars": 5,
+      "songs": [],
+      "comments": [],
+      "id": "d68dd0c7-be40-46bc-871a-d34356fd9b78"
+    },
+    {
+      "username": "d",
+      "passHash": "388ad1c312a488ee9e12998fe097f2258fa8d5ee",
+      "usernameLower": "d",
+      "authKey": "undefinedVwb+VahMqlQf-Z*Uz#QeJzCpjbVn%swDc#qHHSfTL+m@Mfi(&#Q",
+      "availableStars": 5,
+      "songs": [],
+      "comments": [],
+      "id": "03fecd7d-cf6e-47ae-9b86-0cb99ccc541a"
     }
   ]
 }

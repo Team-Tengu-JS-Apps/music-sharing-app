@@ -28,7 +28,7 @@ const songsController = (function () {
             .then(function (template) {
                 context.$element()
                     .html(template());
-                return Promise.resolve(true);
+                return Promise.resolve();
             })
             .then(function () {
                 $('#btn-song-add').on('click', function () {

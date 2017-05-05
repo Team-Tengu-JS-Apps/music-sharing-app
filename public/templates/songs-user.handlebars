@@ -1,0 +1,10 @@
+<ul id="all-songs" class="list-group">
+    {{#each all}}
+        <li class="list-group-item list-group-item-info">
+            <h4>{{title}}</h4><br>
+            <span class="text-info">{{description}}</span>
+            <span class="label label-warning stars pull-right">{{stars}}</span>
+        </li>
+        <li class="list-group-item btn-default" data-url="{{url}}">Watch</li>
+    {{/each}}
+</ul>

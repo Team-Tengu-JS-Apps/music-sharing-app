@@ -4,9 +4,24 @@ import {templateLoader} from 'templates';
 
 const songsController = (function () {
 
+    function get(context) {
+        let result = {};
+        dataService.songs.get()
+            .then(function (resp) {
+                console.log(resp);
+                result.all = resp;
+                return templateLoader.get('songs-user');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.message);
+            });
+    }
+
     function all(context) {
         let result = {};
-        const category = context.params.category || null;
         dataService.songs.all()
             .then(function (resp) {
                 let songs = resp.reduce((arr, x) => x.concat(arr), []);
@@ -47,6 +62,7 @@ const songsController = (function () {
     }
 
     return {
+        get: get,
         all: all,
         add: add
     };

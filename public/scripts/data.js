@@ -114,8 +114,8 @@ const dataService = (function () {
         },
         songs: {
             get: getSongs,
+            all: getAllSongs,
             add: addSong,
-            all: getAllSongs
         }
     };
 }());

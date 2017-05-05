@@ -2,3 +2,4 @@
 - make responsive (bootstrap classes), login and top start components fall to bottom (media queries or bootstrap grid)
 - defensive programming, add guard clauses and catch in promise chains, escaping/validating request data on server
 - videos/add reloads, fix
+- in catch switch the err.message with user appropriate message

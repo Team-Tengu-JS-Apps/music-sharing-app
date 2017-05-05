@@ -13,6 +13,7 @@ module.exports = function (db) {
                 .json('Not authorized User');
             return;
         }
+
         var songs = user.songs;
 
         res.json({
@@ -43,32 +44,16 @@ module.exports = function (db) {
                     result: song
                 });
         })
-        .put('/:id', function (req, res) {
+        .get('/all', function (req, res) {
             var user = req.user;
             if (!user) {
                 res.status(401)
                     .json('Not authorized User');
                 return;
             }
-            var id = +req.params.id;
-            var todo = user.todos.find(function (dbTodo) {
-                return dbTodo.id === id;
-            });
-            if (!todo) {
-                res.status(404)
-                    .json('Todo with such id does not exist in DB');
-                return;
-            }
-
-            var update = req.body;
-
-            todo.text = (typeof update.text === 'undefined') ? todo.text : update.text;
-            todo.state = (typeof update.state === 'undefined') ? todo.state : update.state;
-
-            db.save();
 
             res.json({
-                result: todo
+                result: db('users').map((s) => s.songs)
             });
         });
     return router;

@@ -20,6 +20,7 @@ The lower the views and upload year, the higher the starting stars/underdog modi
 under the "watch video" box (slider). See also the initial design.png.
 
 ## Routes
+ #### Node Server
 
 Users and registration related, plus:
 
@@ -32,4 +33,8 @@ Users and registration related, plus:
 * `#/songs/id/rate` - Post stars/rate
 * `#/songs/id/comments` - Get comments for song
 * `#/songs/id/comment` - Post new comment
-* `#/songs/top` - Top 10 songs with most stars
+* `#/songs/top/:count` - Top number of songs with most stars
+
+#### Exernal Endpoints
+
+* YouTube data API

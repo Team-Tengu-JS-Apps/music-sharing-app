@@ -188,6 +188,19 @@ const dataService = (function () {
             });
     }
 
+    function getTopSongs(count) {
+        const options = {
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.get('api/songs/top/' + count, options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
     return {
         users: {
             signIn,
@@ -200,6 +213,7 @@ const dataService = (function () {
             get: getSongs,
             all: getAllSongs,
             add: addSong,
+            getTop: getTopSongs
         },
         tests: {
             get: getById,

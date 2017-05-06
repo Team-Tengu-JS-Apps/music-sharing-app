@@ -176,6 +176,26 @@ module.exports = function (db) {
             res.json({
                 result: song
             });
+        })
+        .get('/top/:count', function (req, res) {
+            var user = req.user;
+            if (!user) {
+                res.status(401)
+                    .json('Not authorized User');
+                return;
+            }
+
+            var topResults = +req.params.count;
+
+
+            var allSongs = db('users').map((s) => s.songs)
+                .reduce((arr, x) => x.concat(arr), []);
+            var sortedByStars = allSongs.sort((x, y) => x.stars < y.stars);
+            var topSongs = sortedByStars.slice(0, topResults);
+
+            res.json({
+                result: topSongs
+            });
         });
 
     return router;

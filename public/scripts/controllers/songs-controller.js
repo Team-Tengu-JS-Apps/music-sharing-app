@@ -149,6 +149,24 @@ const songsController = (function () {
             });
     }
 
+    function getTop(context) {
+        let result = {};
+        const url = window.location.href;
+        const count = url.substring(url.lastIndexOf('/') + 1);
+        dataService.songs.getTop(count)
+            .then(function (resp) {
+                let songs = resp;
+                result.all = songs;
+                return templateLoader.get('songs');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
     return {
         get: get,
         all: all,
@@ -157,7 +175,8 @@ const songsController = (function () {
         del: del,
         comments: comments,
         comment: comment,
-        rate: rate
+        rate: rate,
+        top: getTop
     };
 }());
 

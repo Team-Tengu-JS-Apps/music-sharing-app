@@ -15,6 +15,12 @@ import {songsController} from 'songs-controller';
         this.get('#/songs', songsController.get);
         this.get('#/songs/all', songsController.all);
         this.get('#/songs/add', songsController.add);
+        this.get('#/songs/:id', songsController.byId);
+        this.get('#/songs/:id/del', songsController.del);
+        this.get('#/songs/:id/comments', songsController.comments);
+        this.get('#/songs/:id/comment', songsController.comment);
+        this.get('#/songs/top/:count', songsController.top);
+
     });
 
     $(function () {

@@ -98,7 +98,104 @@ const dataService = (function () {
                 'x-auth-key': localStorage.getItem(AUTH_KEY)
             }
         };
+
         return jsonRequester.get('api/songs/all', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
+    /*Tests*/
+
+    function getById(id) {
+        const options = {
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.get('api/songs/' + id, options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
+    function deleteById(id) {
+        const options = {
+            data: {
+                id: id,
+                delete: true
+            },
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.delete('api/songs', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
+    function getComments(id) {
+        const options = {
+            data: {
+                id: id,
+                comments: true
+            },
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.post('api/songs', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
+    function postComment(id, text) {
+        const options = {
+            data: {
+                id: id,
+                comment: text || ''
+            },
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.post('api/songs', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
+    function rateSong(id, stars) {
+        const options = {
+            data: {
+                id: id,
+                stars: +stars || 0
+            },
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.post('api/songs', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
+    function getTopSongs(count) {
+        const options = {
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.get('api/songs/top/' + count, options)
             .then(function (resp) {
                 return resp.result;
             });
@@ -116,6 +213,14 @@ const dataService = (function () {
             get: getSongs,
             all: getAllSongs,
             add: addSong,
+            getTop: getTopSongs
+        },
+        tests: {
+            get: getById,
+            del: deleteById,
+            comments: getComments,
+            comment: postComment,
+            rate: rateSong
         }
     };
 }());

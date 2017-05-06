@@ -8,7 +8,6 @@ const songsController = (function () {
         let result = {};
         dataService.songs.get()
             .then(function (resp) {
-                console.log(resp);
                 result.all = resp;
                 return templateLoader.get('songs-user');
             })
@@ -16,7 +15,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.message);
+                toastr.error(err.responseJSON);
             });
     }
 
@@ -33,7 +32,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.message);
+                toastr.error(err.responseJSON);
             });
     }
 
@@ -61,10 +60,123 @@ const songsController = (function () {
             });
     }
 
+    function byId(context) {
+        let result = {};
+        const url = window.location.href;
+        const id = url.substring(url.lastIndexOf('/') + 1);
+        dataService.tests.get(id)
+            .then(function (resp) {
+                result.all = JSON.stringify(resp);
+                return templateLoader.get('tests');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
+    function del(context) {
+        let result = {};
+        const url = window.location.href;
+        const urlParts = url.split('/');
+        const id = urlParts[urlParts.length - 2];
+        dataService.tests.del(id)
+            .then(function (resp) {
+                result.all = JSON.stringify(resp);
+                return templateLoader.get('tests');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
+    function comments(context) {
+        let result = {};
+        const url = window.location.href;
+        const urlParts = url.split('/');
+        const id = urlParts[urlParts.length - 2];
+        dataService.tests.comments(id)
+            .then(function (resp) {
+                result.all = JSON.stringify(resp);
+                return templateLoader.get('tests');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
+    function comment(context) {
+        let result = {};
+        const url = window.location.href;
+        const urlParts = url.split('/');
+        const id = urlParts[urlParts.length - 2];
+        dataService.tests.comment(id, "Fake Comment")
+            .then(function (resp) {
+                result.all = JSON.stringify(resp);
+                return templateLoader.get('tests');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
+    function rate(context) {
+        let result = {};
+        const url = window.location.href;
+        const urlParts = url.split('/');
+        const id = urlParts[urlParts.length - 2];
+        dataService.tests.rate(id, 1)
+            .then(function (resp) {
+                result.all = JSON.stringify(resp);
+                return templateLoader.get('tests');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
+    function getTop(context) {
+        let result = {};
+        const url = window.location.href;
+        const count = url.substring(url.lastIndexOf('/') + 1);
+        dataService.songs.getTop(count)
+            .then(function (resp) {
+                let songs = resp;
+                result.all = songs;
+                return templateLoader.get('songs');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
     return {
         get: get,
         all: all,
-        add: add
+        add: add,
+        byId: byId,
+        del: del,
+        comments: comments,
+        comment: comment,
+        rate: rate,
+        top: getTop
     };
 }());
 

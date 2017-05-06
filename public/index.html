@@ -2,27 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tengu Music App</title>
 
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bower_components/toastr/toastr.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bower_components/toastr/toastr.css">
+    <link rel="stylesheet" href="./css/main.css">
+
 </head>
 <body>
     <div id="root">
 
         <header class="container">
             <div class="row">
-                <div class="page-header col-md-6">
+                <div class="page-header col-md-4">
+
+                    <img src="logo.png" width="50" height="50" srcset="./images/tengu-logo.svg" alt="My logo">
+
                     <h1>MelodyUnderdog</h1>
                     <h3>
-                        <small>Share links to underrated YouTube songs</small>
+                        <small>Share links to underrated <span>YouTube</span> songs</small>
                     </h3>
                 </div>
 
-                <form class="form-inline col-md-6 hidden" id="container-sign-in">
+                <div class="col-md-3">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"
+                                src="https://www.youtube.com/embed/yoHYaS12lgY"></iframe>
+                    </div>
+                </div>
+
+                <form class="form-inline col-md-3 hidden" id="container-sign-in">
                     <div class="form-group pull-right">
                         <label class="sr-only" for="tb-password">Password</label>
                         <input type="password" class="form-control" id="tb-password" placeholder="Password">
@@ -37,14 +49,18 @@
                                 <input type="checkbox"> Remember me
                             </label>
                         </div>
-                        <a href="#/users/register"> or Register</a>
-                        <button id="btn-sign-in" class="btn btn-default">Sign in</button>
+                        <a href="#/users/register" class="text-primary"> or Register</a>
+                        <button id="btn-sign-in" class="suit_and_tie">Sign in</button>
                     </div>
                 </form>
                 <!--Sign out container-->
                 <form class="form-inline col-md-6 hidden" id="container-sign-out">
-                    <button id="btn-sign-out" class="btn btn-default pull-right">Sign out</button>
-                    <span id="signed-in-user" class="btn-success pull-right"></span>
+                    <button id="btn-sign-out" class="suit_and_tie pull-right">Sign out</button>
+
+                    <button type="button" class="btn btn-default btn-md pull-right">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span id="signed-in-user"></span>
+                    </button>
+
                 </form>
             </div>
 
@@ -76,10 +92,6 @@
                         <label for="box-id">Rate</label>
 
                         <h2>Underdog</h2>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item"
-                                    src="https://www.youtube.com/embed/yoHYaS12lgY"></iframe>
-                        </div>
 
                         <!--TODO: Make the comments carousel with a Handlebars template -->
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -90,7 +102,8 @@
                                         <div class="card-block">
                                             <blockquote class="card-blockquote">
                                                 <p>This song is the shit!</p>
-                                                <footer>Someone famous, perhaps is <cite title="Source Title">Gosho</cite>
+                                                <footer>Someone famous, perhaps is <cite
+                                                        title="Source Title">Gosho</cite>
                                                 </footer>
                                             </blockquote>
                                         </div>
@@ -102,7 +115,8 @@
                                         <div class="card-block">
                                             <blockquote class="card-blockquote">
                                                 <p>SUCKS! Period.</p>
-                                                <footer>Someone famous, perhaps is <cite title="Source Title">Stavri</cite>
+                                                <footer>Someone famous, perhaps is <cite
+                                                        title="Source Title">Stavri</cite>
                                                 </footer>
                                             </blockquote>
                                         </div>
@@ -114,7 +128,8 @@
                                         <div class="card-block">
                                             <blockquote class="card-blockquote">
                                                 <p>Let's explore Japanese music! I start today!</p>
-                                                <footer>Someone famous, perhaps is <cite title="Source Title">Milena</cite>
+                                                <footer>Someone famous, perhaps is <cite
+                                                        title="Source Title">Milena</cite>
                                                 </footer>
                                             </blockquote>
                                         </div>
@@ -129,7 +144,6 @@
         </div>
 
         <footer class="footer">
-
         </footer>
     </div>
 

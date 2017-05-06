@@ -18,6 +18,7 @@ import {songsController} from 'songs-controller';
         this.get('#/songs/:id', songsController.byId);
         this.get('#/songs/:id/del', songsController.del);
         this.get('#/songs/:id/comments', songsController.comments);
+        this.get('#/songs/:id/comment', songsController.comment);
 
     });
 

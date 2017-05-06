@@ -68,6 +68,30 @@ module.exports = function (db) {
                 return;
             }
 
+            if (req.body.comment) {
+                var id = +req.body.id;
+                var song = db('users').map((s) => s.songs)
+                    .reduce((arr, x) => x.concat(arr), [])
+                    .find(x => x.id === id);
+
+                if (!song) {
+                    res.status(404)
+                        .json('Song with such id does not exist in DB');
+                    return;
+                }
+                song.comments = song.comments || [];
+                song.comments.push(req.body.comment);
+
+                db.save();
+
+                res.status(201)
+                    .json({
+                        result: `Comment for song with ID ${id} added successfully!`
+                    });
+
+                return;
+            }
+
             var song = {
                 id: idGenerator.next(),
                 title: req.body.title,

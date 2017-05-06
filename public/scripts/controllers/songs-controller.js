@@ -114,13 +114,32 @@ const songsController = (function () {
             });
     }
 
+    function comment(context) {
+        let result = {};
+        const url = window.location.href;
+        const urlParts = url.split('/');
+        const id = urlParts[urlParts.length - 2];
+        dataService.tests.comment(id, "Fake Comment")
+            .then(function (resp) {
+                result.all = JSON.stringify(resp);
+                return templateLoader.get('tests');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
     return {
         get: get,
         all: all,
         add: add,
         byId: byId,
         del: del,
-        comments: comments
+        comments: comments,
+        comment: comment
     };
 }());
 

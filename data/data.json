@@ -60,7 +60,9 @@
           "url": "some url",
           "description": "soem song",
           "stars": 0,
-          "comments": ["Some comment"]
+          "comments": [
+            "Some comment"
+          ]
         }
       ],
       "comments": [],
@@ -78,10 +80,18 @@
           "title": "Some song",
           "url": "https://www.youtube.com/watch?v=yTqrkJAosho",
           "description": "Some description",
-          "stars": 6
+          "stars": 6,
+          "comments": [
+            "Fake Comment",
+            "Fake Comment",
+            "Fake Comment",
+            "Fake Comment",
+            "Fake Comment",
+            "Fake Comment",
+            "Fake Comment"
+          ]
         }
       ],
-      "comments": [],
       "id": "03fecd7d-cf6e-47ae-9b86-0cb99ccc541a"
     }
   ],

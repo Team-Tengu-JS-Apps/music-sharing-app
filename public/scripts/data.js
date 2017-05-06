@@ -137,11 +137,28 @@ const dataService = (function () {
             });
     }
 
-    function getCommentsById(id) {
+    function getComments(id) {
         const options = {
             data: {
                 id: id,
                 comments: true
+            },
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.post('api/songs', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
+    function postComment(id, text) {
+        const options = {
+            data: {
+                id: id,
+                comment: text || ''
             },
             headers: {
                 'x-auth-key': localStorage.getItem(AUTH_KEY)
@@ -170,7 +187,8 @@ const dataService = (function () {
         tests: {
             get: getById,
             del: deleteById,
-            comments: getCommentsById
+            comments: getComments,
+            comment: postComment
         }
     };
 }());

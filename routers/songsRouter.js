@@ -49,12 +49,32 @@ module.exports = function (db) {
                 return;
             }
 
+            if (req.body.comments) {
+                var id = +req.body.id;
+                var songs = db('users').map((s) => s.songs)
+                    .reduce((arr, x) => x.concat(arr), []);
+                var songIndex = songs.findIndex(x => x.id === id);
+                if (songIndex < 0) {
+                    res.status(404)
+                        .json('Cannot get comments, no such song exists in the DB');
+                    return;
+                }
+
+                res.status(201)
+                    .json({
+                        result: songs[songIndex].comments || []
+                    });
+
+                return;
+            }
+
             var song = {
                 id: idGenerator.next(),
                 title: req.body.title,
                 url: req.body.url,
                 description: req.body.description || '',
-                stars: 0
+                stars: 0,
+                comments: []
             };
 
             user.songs = user.songs || [];

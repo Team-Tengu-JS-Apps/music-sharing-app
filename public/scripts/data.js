@@ -137,6 +137,23 @@ const dataService = (function () {
             });
     }
 
+    function getCommentsById(id) {
+        const options = {
+            data: {
+                id: id,
+                comments: true
+            },
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.post('api/songs', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
     return {
         users: {
             signIn,
@@ -152,7 +169,8 @@ const dataService = (function () {
         },
         tests: {
             get: getById,
-            del: deleteById
+            del: deleteById,
+            comments: getCommentsById
         }
     };
 }());

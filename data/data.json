@@ -12,7 +12,10 @@
           "title": "Oh, Pepi",
           "url": "https://www.youtube.com/watch?v=dlF1KxtArCg",
           "description": "pepi",
-          "stars": 12
+          "stars": 12,
+          "comments": [
+            "suck"
+          ]
         },
         {
           "id": 319939,
@@ -45,6 +48,19 @@
           "url": "",
           "description": "",
           "stars": 0
+        },
+        {
+          "id": 349490,
+          "description": "",
+          "stars": 0
+        },
+        {
+          "id": 863615,
+          "title": "True Mathematics - Ladytron",
+          "url": "some url",
+          "description": "soem song",
+          "stars": 0,
+          "comments": ["Some comment"]
         }
       ],
       "comments": [],

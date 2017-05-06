@@ -14,9 +14,9 @@ YT Music Video Share App
   * Give stars to an item
 
 Song items can be sorted by date and username. Users can
-add a song. Only five stars to give per day. Only songs with low
-views and rating can be added (data queried from YT's data API)
-The lower the views and rating, the higher the starting stars/underdog modifier. Comments are anonymous, one random comment is displayed
+add a song. Only five stars to give per day. Only older songs with low
+views can be added (data queried from YT's data API).
+The lower the views and upload year, the higher the starting stars/underdog modifier. Comments are anonymous, one random comment is displayed
 under the "watch video" box (slider). See also the initial design.png.
 
 ## Routes
@@ -24,12 +24,12 @@ under the "watch video" box (slider). See also the initial design.png.
 Users and registration related, plus:
 
 * `#/` - Home page
-* `#/songs` - Get songs by user
+* `#/songs` - Get songs by current user
 * `#/songs/all` - Get all songs
 * `#/songs/add` - Post new song item (title, description, link)
 * `#/songs/id` - Get a specific song item
 * `#/songs/id` - Delete song (POST)
 * `#/songs/id/rate` - Post stars/rate
 * `#/songs/id/comments` - Get comments for song
-* `#/songs/id/comments/add` - Post new comment
+* `#/songs/id/comment` - Post new comment
 * `#/songs/top` - Top 10 songs with most stars

@@ -92,6 +92,39 @@ module.exports = function (db) {
                 return;
             }
 
+            if (req.body.stars) {
+                var id = +req.body.id;
+                var stars = +req.body.stars;
+
+                if (user.availableStars < stars) {
+                    res.status(400)
+                        .json('This user has no more stars to add for the day.');
+                    return;
+                }
+
+                var song = db('users').map((s) => s.songs)
+                    .reduce((arr, x) => x.concat(arr), [])
+                    .find(x => x.id === id);
+
+                if (!song) {
+                    res.status(404)
+                        .json('Song with such id does not exist in DB');
+                    return;
+                }
+                song.stars = song.stars || 0;
+                song.stars += stars;
+                user.availableStars -= stars;
+
+                db.save();
+
+                res.status(201)
+                    .json({
+                        result: `${stars} stars added to song with ID ${id}!`
+                    });
+
+                return;
+            }
+
             var song = {
                 id: idGenerator.next(),
                 title: req.body.title,

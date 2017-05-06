@@ -8,7 +8,6 @@ const songsController = (function () {
         let result = {};
         dataService.songs.get()
             .then(function (resp) {
-                console.log(resp);
                 result.all = resp;
                 return templateLoader.get('songs-user');
             })
@@ -132,6 +131,24 @@ const songsController = (function () {
             });
     }
 
+    function rate(context) {
+        let result = {};
+        const url = window.location.href;
+        const urlParts = url.split('/');
+        const id = urlParts[urlParts.length - 2];
+        dataService.tests.rate(id, 1)
+            .then(function (resp) {
+                result.all = JSON.stringify(resp);
+                return templateLoader.get('tests');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
     return {
         get: get,
         all: all,
@@ -139,7 +156,8 @@ const songsController = (function () {
         byId: byId,
         del: del,
         comments: comments,
-        comment: comment
+        comment: comment,
+        rate: rate
     };
 }());
 

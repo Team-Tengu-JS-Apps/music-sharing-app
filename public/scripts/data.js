@@ -171,6 +171,23 @@ const dataService = (function () {
             });
     }
 
+    function rateSong(id, stars) {
+        const options = {
+            data: {
+                id: id,
+                stars: +stars || 0
+            },
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.post('api/songs', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
     return {
         users: {
             signIn,
@@ -188,7 +205,8 @@ const dataService = (function () {
             get: getById,
             del: deleteById,
             comments: getComments,
-            comment: postComment
+            comment: postComment,
+            rate: rateSong
         }
     };
 }());

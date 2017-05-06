@@ -78,11 +78,30 @@ const songsController = (function () {
             });
     }
 
+    function del(context) {
+        let result = {};
+        const url = window.location.href;
+        const urlParts = url.split('/');
+        const id = urlParts[urlParts.length - 2];
+        dataService.tests.del(id)
+            .then(function (resp) {
+                result.all = JSON.stringify(resp);
+                return templateLoader.get('tests');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
     return {
         get: get,
         all: all,
         add: add,
-        byId: byId
+        byId: byId,
+        del: del
     };
 }());
 

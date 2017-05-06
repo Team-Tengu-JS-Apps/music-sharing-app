@@ -8,20 +8,6 @@
       "availableStars": 5,
       "songs": [
         {
-          "id": 794080,
-          "title": "My Awesome Song",
-          "url": "https://www.youtube.com/watch?v=ZF3-mHk5jJE",
-          "description": "Epic",
-          "stars": 0
-        },
-        {
-          "id": 12252,
-          "title": "Oh, Pepi",
-          "url": "https://www.youtube.com/watch?v=dlF1KxtArCg",
-          "description": "pepi",
-          "stars": 0
-        },
-        {
           "id": 305008,
           "title": "Oh, Pepi",
           "url": "https://www.youtube.com/watch?v=dlF1KxtArCg",
@@ -54,11 +40,11 @@
           "stars": 0
         },
         {
-          "id": 518537,
-          "title": "Cheap Thrills",
-          "url": "https://www.youtube.com/watch?v=nYh-n7EOtMA",
-          "description": "My Favorite Song",
-          "stars": 3
+          "id": 803082,
+          "title": "",
+          "url": "",
+          "description": "",
+          "stars": 0
         }
       ],
       "comments": [],

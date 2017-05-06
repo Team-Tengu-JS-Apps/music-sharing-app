@@ -28,6 +28,27 @@ module.exports = function (db) {
                 return;
             }
 
+            if (req.body.delete) {
+                var id = +req.body.id;
+                var songs = user.songs;
+                var songIndex = songs.findIndex(x => x.id === id);
+                if (songIndex < 0) {
+                    res.status(404)
+                        .json('The user has no song with such ID');
+                    return;
+                }
+
+                songs.splice(songIndex, 1);
+                db.save();
+
+                res.status(201)
+                    .json({
+                        result: `Song with ID ${id} removed successfully!`
+                    });
+
+                return;
+            }
+
             var song = {
                 id: idGenerator.next(),
                 title: req.body.title,
@@ -68,14 +89,12 @@ module.exports = function (db) {
             var song = db('users').map((s) => s.songs)
                 .reduce((arr, x) => x.concat(arr), [])
                 .find(x => x.id === id);
-            console.log(song);
+
             if (!song) {
                 res.status(404)
                     .json('Song with such id does not exist in DB');
                 return;
             }
-
-
 
             res.json({
                 result: song

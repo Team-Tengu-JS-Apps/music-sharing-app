@@ -28,6 +28,7 @@ Users and registration related, plus:
 * `#/songs/all` - Get all songs
 * `#/songs/add` - Post new song item (title, description, link)
 * `#/songs/id` - Get a specific song item
+* `#/songs/id` - Delete song
 * `#/songs/id/rate` - Post stars/rate
 * `#/songs/id/comments` - Get comments for song
 * `#/songs/id/comments/add` - Post new comment

@@ -106,6 +106,7 @@ const dataService = (function () {
     }
 
     /*Tests*/
+
     function getById(id) {
         const options = {
             headers: {
@@ -114,6 +115,23 @@ const dataService = (function () {
         };
 
         return jsonRequester.get('api/songs/' + id, options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
+    function deleteById(id) {
+        const options = {
+            data: {
+                id: id,
+                delete: true
+            },
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.delete('api/songs', options)
             .then(function (resp) {
                 return resp.result;
             });
@@ -133,7 +151,8 @@ const dataService = (function () {
             add: addSong,
         },
         tests: {
-            get: getById
+            get: getById,
+            del: deleteById
         }
     };
 }());

@@ -55,6 +55,32 @@ module.exports = function (db) {
             res.json({
                 result: db('users').map((s) => s.songs)
             });
+        })
+        .get('/:id', function(req, res) {
+            var user = req.user;
+            if (!user) {
+                res.status(401)
+                    .json('Not authorized User');
+                return;
+            }
+            var id = +req.params.id;
+
+            var song = db('users').map((s) => s.songs)
+                .reduce((arr, x) => x.concat(arr), [])
+                .find(x => x.id === id);
+            console.log(song);
+            if (!song) {
+                res.status(404)
+                    .json('Song with such id does not exist in DB');
+                return;
+            }
+
+
+
+            res.json({
+                result: song
+            });
         });
+
     return router;
 };

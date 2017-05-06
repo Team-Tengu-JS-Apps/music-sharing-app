@@ -24,12 +24,11 @@ under the "watch video" box (slider). See also the initial design.png.
 Users and registration related, plus:
 
 * `#/` - Home page
-* `#/songs` - Get all songs by user
+* `#/songs` - Get songs by user
 * `#/songs/all` - Get all songs
 * `#/songs/add` - Post new song item (title, description, link)
 * `#/songs/id` - Get a specific song item
 * `#/songs/id/rate` - Post stars/rate
-* `#/songs/id/stats` - Get YT stats for song video (not Node)
-* `#/songs/id/comments` - Get comments for a song
+* `#/songs/id/comments` - Get comments for song
 * `#/songs/id/comments/add` - Post new comment
-* `#/top` - Top 10 songs with most stars
+* `#/songs/top` - Top 10 songs with most stars

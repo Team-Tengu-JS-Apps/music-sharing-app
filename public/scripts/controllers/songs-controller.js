@@ -16,7 +16,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.message);
+                toastr.error(err.responseJSON);
             });
     }
 
@@ -33,7 +33,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.message);
+                toastr.error(err.responseJSON);
             });
     }
 
@@ -61,10 +61,28 @@ const songsController = (function () {
             });
     }
 
+    function byId(context) {
+        let result = {};
+        const url = window.location.href;
+        const id = url.substring(url.lastIndexOf('/') + 1);
+        dataService.tests.get(id)
+            .then(function (resp) {
+                result.all = JSON.stringify(resp);
+                return templateLoader.get('tests');
+            })
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON);
+            });
+    }
+
     return {
         get: get,
         all: all,
-        add: add
+        add: add,
+        byId: byId
     };
 }());
 

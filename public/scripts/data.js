@@ -98,7 +98,22 @@ const dataService = (function () {
                 'x-auth-key': localStorage.getItem(AUTH_KEY)
             }
         };
+
         return jsonRequester.get('api/songs/all', options)
+            .then(function (resp) {
+                return resp.result;
+            });
+    }
+
+    /*Tests*/
+    function getById(id) {
+        const options = {
+            headers: {
+                'x-auth-key': localStorage.getItem(AUTH_KEY)
+            }
+        };
+
+        return jsonRequester.get('api/songs/' + id, options)
             .then(function (resp) {
                 return resp.result;
             });
@@ -116,6 +131,9 @@ const dataService = (function () {
             get: getSongs,
             all: getAllSongs,
             add: addSong,
+        },
+        tests: {
+            get: getById
         }
     };
 }());

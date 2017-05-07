@@ -1,0 +1,17 @@
+<div>
+    <ul id="all-songs" class="list-group">
+        {{#each all}}
+        <div id="song">
+            <li class="list-group-item">
+                <h4>{{title}}</h4><br> {{#if description}}
+                <small>{{description}}</small><br> {{else}}
+                <small><em>No description</em></small><br> {{/if}}
+                <span id="watch-song" type="button" class="glyphicon glyphicon-play" data-url="{{url}}" data-id="{{id}}"></span>
+                <span id="share-song" type="button" class="glyphicon glyphicon-share-alt" data-url="{{url}}" data-id="{{id}}"></span>
+                <span id="remove-song" type="button" class="glyphicon glyphicon-trash" data-url="{{url}}" data-id="{{id}}"></span>
+                <span class="glyphicon glyphicon-star-empty pull-right" aria-hidden="true">{{stars}}</span>
+            </li>
+        </div>
+        {{/each}}
+    </ul>
+</div>

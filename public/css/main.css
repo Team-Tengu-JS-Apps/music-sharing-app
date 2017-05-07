@@ -6,6 +6,15 @@ body {
     margin-bottom: 100px;
 }
 
+#song {
+    margin-top: 30px;
+}
+
+#iframe {
+    margin: 0px auto 30px auto;
+    max-width: 450px;
+}
+
 #container-sign-out {
     padding: 10px;
 }
@@ -182,7 +191,3 @@ input[type=checkbox].with-font:focus ~ label {
 h4 {
     color: #138E81;
 }
-
-
-
-

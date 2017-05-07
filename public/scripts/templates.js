@@ -7,7 +7,7 @@ const templateLoader = (() => {
                 resolve(Handlebars.compile(templatesCache[templateName]));
             }
 
-            $.get(`./templates/${templateName}.handlebars`, template => {
+            $.get(`./templates/${templateName}.hbs`, template => {
                 templatesCache[templateName] = template;
                 resolve(Handlebars.compile(template));
             })

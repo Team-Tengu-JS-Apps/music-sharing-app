@@ -28,11 +28,11 @@ const youTubeController = function () {
                     description: $('#tb-song-description').val()
                 };
 
-                return dataService.songs.add(song);
-            })
-            .then(function (resp) {
-                toastr.success(`Song "${song.title}" added!`);
-                context.redirect('#/songs');
+                dataService.songs.add(song)
+                    .then(function (resp) {
+                        toastr.success(`Song "${song.title}" added!`);
+                        // context.redirect('#/songs');
+                    });
             })
             .catch(function (err) {
                 toastr.error(err.responseJSON);

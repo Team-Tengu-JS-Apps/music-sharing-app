@@ -50,7 +50,6 @@ const songsController = (function () {
                         trigger: null
                     });
                 $('#btn-song-add').on('click', function (event) {
-
                     const bootstrapValidator = $("#add-song-form").data('bootstrapValidator');
 
                     if (!bootstrapValidator.isValid()) {

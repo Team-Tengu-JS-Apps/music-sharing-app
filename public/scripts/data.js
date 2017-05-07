@@ -109,17 +109,8 @@ const dataService = (function () {
     /*YouTube queries*/
 
     function query(id) {
-        const options = {
-            headers: {
-                'x-auth-key': localStorage.getItem(AUTH_KEY)
-            }
-        };
-
         const requestURL = `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${id}&key=${YT_DATA_API_KEY}`;
-        return jsonRequester.get(requestURL, options)
-            .then(function (resp) {
-                return resp.result;
-            });
+        return jsonRequester.get(requestURL);
     }
 
     /*Tests*/

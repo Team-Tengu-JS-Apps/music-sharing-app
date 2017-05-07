@@ -6,8 +6,16 @@ body {
     margin-bottom: 100px;
 }
 
-#container-sign-out, #container-sign-in {
+#container-sign-out {
     padding: 10px;
+}
+
+#container-sign-in {
+    margin-top: 21px;
+}
+
+#container-sign-in .form-group {
+    margin-top: 5px;
 }
 
 #signed-in-user {
@@ -175,9 +183,6 @@ h4 {
     color: #138E81;
 }
 
-/*#add-song-form {
-    margin-top: 10px;
-}*/
 
 
 

@@ -35,8 +35,16 @@ import {songsController} from 'songs-controller';
                 usersController.signOut();
             });
         } else {
-            $('#container-sign-in').removeClass('hidden');
+            $('#container-sign-in')
+                .removeClass('hidden')
+                .bootstrapValidator({
+                    live: 'enabled',
+                    trigger: null
+                });
+
             $('#btn-sign-in').on('click', function (e) {
+
+
                 e.preventDefault();
                 usersController.signIn();
             });

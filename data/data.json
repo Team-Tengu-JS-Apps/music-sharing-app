@@ -71,6 +71,24 @@
       "availableStars": 5,
       "songs": [],
       "id": "92b0d830-34cb-46c1-a7f1-269ce40a65d1"
+    },
+    {
+      "username": "gosho12",
+      "passHash": "ce669da0e1b2c44b9fdef610e447d136951667e6",
+      "usernameLower": "gosho12",
+      "authKey": "undefinedHznD=lmeA_zUw#Nc(HsWaIgmFnwp_*r%R%^ZqSuYe$i@)W(eGcf",
+      "availableStars": 5,
+      "songs": [],
+      "id": "19043623-d0df-49e5-8b50-84e672f77cca"
+    },
+    {
+      "username": "ssssaaa",
+      "passHash": "716242dcaf606580807e4de318de1eda382fcc6f",
+      "usernameLower": "ssssaaa",
+      "authKey": "undefinedQmc($DLOxnjruTOvWWqmSZEcNyZ&aEN&+-U)MINPSRRWRaejPU%",
+      "availableStars": 5,
+      "songs": [],
+      "id": "f9f7f411-9d16-463d-927e-a4ec00b2946d"
     }
   ],
   "songs": [],

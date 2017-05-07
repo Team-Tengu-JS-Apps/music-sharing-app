@@ -27,7 +27,9 @@ const usersController = function () {
                         trigger: null
                     });
 
-                $('#btn-register').on('click', function () {
+                $('#btn-register').on('click', function (event) {
+                    event.preventDefault();
+
                     const bootstrapValidator = $("#register-user-form").data('bootstrapValidator');
 
                     if (!bootstrapValidator.isValid()) {

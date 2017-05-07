@@ -21,7 +21,22 @@ const usersController = function () {
             .then(function (template) {
                 context.$element().html(template());
 
-                $('#btn-register').on('click', function () {
+                $('#register-user-form')
+                    .bootstrapValidator({
+                        live: 'enabled',
+                        trigger: null
+                    });
+
+                $('#btn-register').on('click', function (event) {
+                    event.preventDefault();
+
+                    const bootstrapValidator = $("#register-user-form").data('bootstrapValidator');
+
+                    if (!bootstrapValidator.isValid()) {
+                        toastr.warning(`Unable to register user!`);
+                        return;
+                    }
+
                     const user = {
                         username: $('#tb-reg-username').val(),
                         password: $('#tb-reg-pass').val()

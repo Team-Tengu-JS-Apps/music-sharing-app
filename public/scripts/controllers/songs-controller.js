@@ -44,8 +44,22 @@ const songsController = (function () {
                 return Promise.resolve();
             })
             .then(function () {
-                $('#btn-song-add').on('click', function () {
-                    const song = {
+                $('#add-song-form')
+                    .bootstrapValidator({
+                        live: 'enabled',
+                        trigger: null
+                    });
+                $('#btn-song-add').on('click', function (event) {
+                    const bootstrapValidator = $("#add-song-form").data('bootstrapValidator');
+
+                    if (!bootstrapValidator.isValid()) {
+                        toastr.warning(`Unable to send form data!`);
+                        return;
+                    }
+
+                    context.redirect('#/songs/add/query');
+
+                    /*const song = {
                         title: $('#tb-song-title').val(),
                         url: $('#tb-song-url').val(),
                         description: $('#tb-song-description').val()
@@ -55,7 +69,7 @@ const songsController = (function () {
                         .then(function (resp) {
                             toastr.success(`Song "${song.title}" added!`);
                             context.redirect('#/songs');
-                        });
+                        });*/
                 });
             });
     }

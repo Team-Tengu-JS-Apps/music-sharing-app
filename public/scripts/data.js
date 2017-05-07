@@ -1,8 +1,9 @@
 import {jsonRequester} from 'requester';
 
 const dataService = (function () {
-    const USERNAME_KEY = 'signed-in-user-username',
-        AUTH_KEY = 'signed-in-user-auth-key';
+    const USERNAME_KEY = 'signed-in-user-username';
+    const AUTH_KEY = 'signed-in-user-auth-key';
+    const YT_DATA_API_KEY = `AIzaSyD1eKGLdYJkdiBntvU5nR2zOd8K-y6M2O8`;
 
     /* Users */
 
@@ -103,6 +104,13 @@ const dataService = (function () {
             .then(function (resp) {
                 return resp.result;
             });
+    }
+
+    /*YouTube queries*/
+
+    function query(id) {
+        const requestURL = `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${id}&key=${YT_DATA_API_KEY}`;
+        return jsonRequester.get(requestURL);
     }
 
     /*Tests*/
@@ -214,6 +222,9 @@ const dataService = (function () {
             all: getAllSongs,
             add: addSong,
             getTop: getTopSongs
+        },
+        ytData: {
+          query
         },
         tests: {
             get: getById,

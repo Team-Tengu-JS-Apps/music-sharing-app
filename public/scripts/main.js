@@ -2,6 +2,7 @@ import {dataService} from 'data';
 import {homeController} from 'home-controller';
 import {usersController} from 'users-controller';
 import {songsController} from 'songs-controller';
+import {youTubeController} from 'youtube-controller';
 
 (function () {
 
@@ -20,6 +21,8 @@ import {songsController} from 'songs-controller';
         this.get('#/songs/:id/comments', songsController.comments);
         this.get('#/songs/:id/comment', songsController.comment);
         this.get('#/songs/top/:count', songsController.top);
+
+        this.get('#/songs/add/query', youTubeController.query);
 
     });
 

@@ -11,7 +11,7 @@ const templateLoader = (() => {
                 templatesCache[templateName] = template;
                 resolve(Handlebars.compile(template));
             })
-        })
+        });
     }
 
     return { get };

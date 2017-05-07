@@ -1,43 +1,39 @@
 const controllerHelpers = function () {
-    function groupByCategory(item) {
-        return item.category;
+    const underdogStatus = {
+        LOW: 1,
+        MEDIUM: 2,
+        HIGH: 3
+    };
+
+    function parseIdFromYoutubeURL(url) {
+        url = url || '';
+        return url.split('v=').pop();
     }
 
-    function parseGroups(items, category) {
-        return {
-            category,
-            items
-        };
-    }
+    function evaluateUnderdogStatus(resp) {
+        const stats = resp.items[0].statistics;
+        const viewCount = +stats.viewCount;
+        const likeCount = +stats.likeCount;
 
-    function filterByCategory(category) {
-        return function (group) {
-            return group.category.toLowerCase() === category.toLowerCase();
-        };
-    }
+        const result = {};
+        if ((viewCount > 500000 && viewCount < 1000000) || (likeCount > 500 && likeCount < 1000)) {
+            result.underdogStatus = underdogStatus.LOW;
+        }
 
-    function fixDate_old(event) {
-        return {
-            title: event.title,
-            date: moment(event.date).format('MMM Do YYYY, hh:mm'),
-            timeRemaining: moment(event.date).fromNow(),
-            description: event.description,
-            category: event.category
-        };
-    }
+        if ((viewCount > 100000 && viewCount <= 500000) || (likeCount > 100 && likeCount < 500)) {
+            result.underdogStatus = underdogStatus.MEDIUM;
+        }
 
-    function fixDate(item) {
-        const newItem = Object.create(item);
-        newItem.date = moment(item.date).format('MMM Do YYYY, hh:mm');
-        newItem.timeRemaining = moment(item.date).fromNow();
-        return newItem;
+        if (viewCount < 100000 || likeCount < 100) {
+            result.underdogStatus = underdogStatus.HIGH;
+        }
+
+        return result;
     }
 
     return {
-        groupByCategory,
-        parseGroups,
-        filterByCategory,
-        fixDate
+        parseIdFromYoutubeURL,
+        evaluateUnderdogStatus
     };
 }();
 

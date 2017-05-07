@@ -3,3 +3,5 @@
 - defensive programming, add guard clauses and catch in promise chains, escaping/validating request data on server
 - search for an underdog icon(SVG)
 - add recover stars for the day on server
+- git ignore .idea
+- bootstrapValidator bower install, not cdn

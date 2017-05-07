@@ -41,7 +41,8 @@ body {
 
 .list-group-item {
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
+    padding-left: 13px;
 }
 
 /*** custom checkboxes ***/
@@ -160,13 +161,23 @@ input[type=checkbox].with-font:focus ~ label {
 
 .lb-md {
     font-size: 16px;
-    padding: 5px;
-    color: #1b6d85;
 }
 
 .lb-md-underline {
     text-decoration: underline;
 }
+
+.glyphicon {
+    padding: 5px;
+}
+
+h4 {
+    color: #138E81;
+}
+
+/*#add-song-form {
+    margin-top: 10px;
+}*/
 
 
 

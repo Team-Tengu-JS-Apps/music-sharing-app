@@ -4,3 +4,4 @@
 - search for an underdog icon(SVG)
 - add recover stars for the day on server
 - git ignore .idea
+- bootstrapValidator bower install, not cdn

@@ -8,203 +8,26 @@
       "availableStars": 5,
       "songs": [
         {
-          "id": 305008,
-          "title": "Oh, Pepi",
-          "url": "https://www.youtube.com/watch?v=dlF1KxtArCg",
-          "description": "pepi",
-          "stars": 12,
-          "comments": [
-            "suck"
-          ]
-        },
-        {
-          "id": 319939,
-          "title": "Oh, Pepi 2",
-          "url": "https://www.youtube.com/watch?v=dlF1KxtArCg",
-          "description": "pepi",
-          "stars": 0
-        },
-        {
-          "id": 784329,
-          "title": "Some other song",
-          "url": "url-of-the-song",
-          "description": "Nqma",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 15831,
-          "title": "",
-          "url": "",
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 778690,
-          "title": "",
-          "url": "ss",
-          "description": "dddd",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 533466,
-          "title": "",
-          "url": "",
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 545506,
-          "title": "",
-          "url": "",
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 274710,
-          "title": "",
-          "url": "",
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 354176,
-          "title": "sssssss",
+          "id": 98556,
+          "title": "Kate Ryan Ella",
           "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "ddd",
+          "description": "ss",
           "stars": 0,
           "comments": []
         },
         {
-          "id": 354183,
-          "title": "sssssss",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "ddd",
-          "stars": 0,
+          "id": 147382,
+          "title": "Honkey Song",
+          "url": "https://www.youtube.com/watch?v=yTqrkJAosho",
+          "description": "ss",
+          "stars": 1,
           "comments": []
         },
         {
-          "id": 430690,
-          "title": "sssssss",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 430703,
-          "title": "sssssss",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 543832,
-          "title": "aaaaaa",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 543839,
-          "title": "aaaaaa",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 613245,
-          "title": "sasasss ",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "ssss",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 613250,
-          "title": "sasasss ",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "ssss",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 898239,
-          "title": "sdasdasdas",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "ssssss",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 898249,
-          "title": "sdasdasdas",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "ssssss",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 4644,
-          "title": "Some song",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "sdsdsd",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 4652,
-          "title": "Some song",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "sdsdsd",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 83475,
-          "title": "ssssss",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "sss",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 83480,
-          "title": "ssssss",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "sss",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 181046,
-          "title": "asasaaaa",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "sssssss",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 181054,
-          "title": "asasaaaa",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "sssssss",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 471757,
-          "title": "ssssss",
-          "url": "https://www.youtube.com/watch?v=hdJN0ss7jA0",
-          "description": "saa",
+          "id": 426585,
+          "title": "Shakespeare",
+          "url": "https://www.youtube.com/watch?v=ZF3-mHk5jJE",
+          "description": "dd",
           "stars": 0,
           "comments": []
         }
@@ -220,33 +43,12 @@
       "availableStars": 0,
       "songs": [
         {
-          "id": 403153,
-          "title": "Zara Larson",
-          "url": "https://www.youtube.com/watch?v=tD4HCZe-tew",
-          "description": "nashta Zara",
-          "stars": 0
-        },
-        {
-          "id": 803082,
-          "title": "",
-          "url": "",
-          "description": "",
-          "stars": 4
-        },
-        {
-          "id": 349490,
-          "description": "",
-          "stars": 0
-        },
-        {
-          "id": 863615,
-          "title": "True Mathematics - Ladytron",
-          "url": "some url",
-          "description": "soem song",
-          "stars": 3,
-          "comments": [
-            "Some comment"
-          ]
+          "id": 491357,
+          "title": "The Flirts",
+          "url": "https://www.youtube.com/watch?v=xdEyZ3-OjU8",
+          "description": "the flirts",
+          "stars": 12,
+          "comments": []
         }
       ],
       "comments": [],
@@ -258,26 +60,17 @@
       "usernameLower": "d",
       "authKey": "undefinedVwb+VahMqlQf-Z*Uz#QeJzCpjbVn%swDc#qHHSfTL+m@Mfi(&#Q",
       "availableStars": 5,
-      "songs": [
-        {
-          "id": 325994,
-          "title": "Some song",
-          "url": "https://www.youtube.com/watch?v=yTqrkJAosho",
-          "description": "Some description",
-          "stars": 11,
-          "comments": [
-            "Fake Comment",
-            "Fake Comment",
-            "Fake Comment",
-            "Fake Comment",
-            "Fake Comment",
-            "Fake Comment",
-            "Fake Comment",
-            "Fake Comment"
-          ]
-        }
-      ],
+      "songs": [],
       "id": "03fecd7d-cf6e-47ae-9b86-0cb99ccc541a"
+    },
+    {
+      "username": "Peshobe",
+      "passHash": "515c6adfc8f7a305f2ea4bb1b8d920f9486b0d6d",
+      "usernameLower": "peshobe",
+      "authKey": "undefinedhGBzhMx*Mb*PYEPCS=BNsMwfgdLXiMMmqgJ*TCDd*vE*nNtzJcz",
+      "availableStars": 5,
+      "songs": [],
+      "id": "92b0d830-34cb-46c1-a7f1-269ce40a65d1"
     }
   ],
   "songs": [],

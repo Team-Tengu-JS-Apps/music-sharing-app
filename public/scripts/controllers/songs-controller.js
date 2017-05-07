@@ -50,7 +50,7 @@ const songsController = (function () {
                         trigger: null
                     });
                 $('#btn-song-add').on('click', function (event) {
-
+                    window.history.back(1);
                     const bootstrapValidator = $("#add-song-form").data('bootstrapValidator');
 
                     if (!bootstrapValidator.isValid()) {
@@ -69,8 +69,6 @@ const songsController = (function () {
                             toastr.success(`Song "${song.title}" added!`);
                             context.redirect('#/songs');
                         });
-
-                    return false;
                 });
             });
     }

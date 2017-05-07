@@ -16,26 +16,35 @@ const youTubeController = function () {
                 return dataService.ytData.query(songId);
             })
             .then(function (resp) {
-                return new Promise(function (resolve, reject) {
-                    const isValid = controllerHelpers.evaluateUnderdogStatus(resp);
-                    return isValid ? resolve() : reject();
+                return new Promise((resolve, reject) => {
+                    // ux-driven delay :) so we can have a look at the progress bar
+                    setTimeout(x => resolve(resp), 1000);
                 });
             })
-            .then(function () {
+            .then(function (resp) {
+                return new Promise(function (resolve, reject) {
+                    const status = controllerHelpers.evaluateUnderdogStatus(resp).underdogStatus;
+                    const isValid = !!status;
+                    return isValid ? resolve(status) : reject(`This song doesn't qualify as an "Underdog"`);
+                });
+            })
+            .then(function (stat) {
                 const song = {
                     title: $('#tb-song-title').val(),
                     url: $('#tb-song-url').val(),
-                    description: $('#tb-song-description').val()
+                    description: $('#tb-song-description').val(),
+                    underdog: stat
                 };
 
                 dataService.songs.add(song)
                     .then(function (resp) {
-                        toastr.success(`Song "${song.title}" added!`);
-                        // context.redirect('#/songs');
+                        toastr.success(`Song "${song.title}" added. Underdog status ${stat}!`);
+                        context.redirect('#/songs');
                     });
             })
             .catch(function (err) {
-                toastr.error(err.responseJSON);
+                toastr.error((typeof err === 'string') ? err : err.responseJSON);
+                $("#song-yt-query").hide();
             });
     }
 

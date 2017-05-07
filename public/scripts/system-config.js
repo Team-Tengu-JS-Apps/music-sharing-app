@@ -15,6 +15,7 @@ SystemJS.config({
         'controller-helpers': './scripts/controllers/helpers/controller-helpers.js',
         'home-controller': './scripts/controllers/home-controller.js',
         'users-controller': './scripts/controllers/users-controller.js',
-        'songs-controller': './scripts/controllers/songs-controller.js'
+        'songs-controller': './scripts/controllers/songs-controller.js',
+        'youtube-controller': './scripts/controllers/youtube-controller.js'
     }
 });

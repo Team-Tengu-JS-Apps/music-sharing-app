@@ -1,43 +1,16 @@
 const controllerHelpers = function () {
-    function groupByCategory(item) {
-        return item.category;
+    function parseIdFromYoutubeURL(url) {
+        url = url || '';
+        return url.split('v=').pop();
     }
 
-    function parseGroups(items, category) {
-        return {
-            category,
-            items
-        };
-    }
-
-    function filterByCategory(category) {
-        return function (group) {
-            return group.category.toLowerCase() === category.toLowerCase();
-        };
-    }
-
-    function fixDate_old(event) {
-        return {
-            title: event.title,
-            date: moment(event.date).format('MMM Do YYYY, hh:mm'),
-            timeRemaining: moment(event.date).fromNow(),
-            description: event.description,
-            category: event.category
-        };
-    }
-
-    function fixDate(item) {
-        const newItem = Object.create(item);
-        newItem.date = moment(item.date).format('MMM Do YYYY, hh:mm');
-        newItem.timeRemaining = moment(item.date).fromNow();
-        return newItem;
+    function evaluateUnderdogStatus(resp) {
+        return true;
     }
 
     return {
-        groupByCategory,
-        parseGroups,
-        filterByCategory,
-        fixDate
+        parseIdFromYoutubeURL,
+        evaluateUnderdogStatus
     };
 }();
 

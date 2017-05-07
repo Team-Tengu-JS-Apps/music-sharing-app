@@ -4,13 +4,16 @@
   "description": "Music share application",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "prestart": "npm install",
+    "preinstall": "npm install ./public",
+    "postinstall": "bower install"
   },
   "author": "Nikolai Valkov <ndvalkov@abv.bg>",
   "contributors": [
     {
-      "name": "",
-      "email": ""
+      "name": "Rumen Sechkov",
+      "email": "rumensechkov@yahoo.com"
     }
   ],
   "repository": {

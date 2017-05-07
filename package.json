@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "prestart": "npm install",
-    "preinstall": "npm install ./public",
-    "postinstall": "bower install"
+    "preinstall": "npm install ./public --prefix ./public",
+    "install": "bower install"
   },
   "author": "Nikolai Valkov <ndvalkov@abv.bg>",
   "contributors": [

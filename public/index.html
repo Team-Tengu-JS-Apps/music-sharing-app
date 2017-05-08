@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tengu Music App</title>
+
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="./bower_components/toastr/toastr.css">
+
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <div id="root">
+
+        <header class="container">
+            <div class="row">
+                <div class="page-header col-md-4">
+
+                    <img src="logo.png" width="50" height="50" srcset="./images/tengu-logo.svg" alt="music app logo">
+
+                    <h1>MelodyUnderdog</h1>
+                    <h3>
+                        <small>Share links to underrated <span>YouTube</span> songs</small>
+                    </h3>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"
+                                src="https://www.youtube.com/embed/yoHYaS12lgY"></iframe>
+                    </div>
+                </div>
+
+                <form class="form-inline col-md-3 hidden" id="container-sign-in">
+
+                    <div class="form-group pull-right">
+                        <input type="text" class="form-control" id="tb-username" name="username" placeholder="Username" />
+                    </div>
+
+                    <div class="form-group pull-right">
+                        <input type="password" class="form-control" id="tb-password" name="password" placeholder="Password"/>
+                    </div>
+
+                    <div class="form-subgroup pull-right">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                        <a href="#/users/register" class="text-primary"> or Register</a>
+                        <button id="btn-sign-in" class="suit_and_tie">Sign in</button>
+                    </div>
+                </form>
+                <!--Sign out container-->
+                <form class="form-inline col-md-6 hidden" id="container-sign-out">
+                    <button id="btn-sign-out" class="suit_and_tie pull-right">Sign out</button>
+
+                    <button type="button" class="btn btn-default btn-md pull-right">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span
+                            id="signed-in-user"></span>
+                    </button>
+
+                </form>
+            </div>
+
+            <nav id="main-nav" class="navbar navbar-default navbar-collapse hidden row">
+                <ul class="nav navbar-nav col-md-8">
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/songs/all">All Songs</a></li>
+                    <li><a href="#/songs">My Songs</a></li>
+                    <!--Uncomment to test routes-->
+                    <!--<li><a href="#/songs/794080">Test API</a></li>-->
+                    <!--<li><a href="#/songs/794080/del">Test API</a></li>-->
+                    <!--<li><a href="#/songs/794080/comments">Test API</a></li>-->
+                    <!--<li><a href="#/songs/325994/comment">Test API</a></li>-->
+                    <!--<li><a href="#/songs/325994/rate">Test API</a></li>-->
+                    <li><a href="#/songs/top/3">Test API</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="content">
+
+                        <!--Main content goes here !-->
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <aside id="right">
+
+                        <input id="box-id" type="checkbox" class="with-font"/>
+                        <label for="box-id">Rate</label>
+
+                        <h2>Underdog</h2>
+
+                        <div id="comments-carousel" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="card text-center">
+                                        <div class="card-block">
+                                            <blockquote class="card-blockquote">
+                                                <p>This song is the shit!</p>
+                                                <footer>Someone famous, perhaps is <cite
+                                                        title="Source Title">Gosho</cite>
+                                                </footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="card text-center">
+                                        <div class="card-block">
+                                            <blockquote class="card-blockquote">
+                                                <p>SUCKS! Period.</p>
+                                                <footer>Someone famous, perhaps is <cite
+                                                        title="Source Title">Stavri</cite>
+                                                </footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="card text-center">
+                                        <div class="card-block">
+                                            <blockquote class="card-blockquote">
+                                                <p>Let's explore Japanese music! I start today!</p>
+                                                <footer>Someone famous, perhaps is <cite
+                                                        title="Source Title">Milena</cite>
+                                                </footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+        </footer>
+    </div>
+
+    <!-- libs -->
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./bower_components/bootstrap/js/carousel.js"></script>
+    <script src="./bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="./bower_components/handlebars/handlebars.js"></script>
+    <script src="./bower_components/sammy/lib/sammy.js"></script>
+    <script src="./bower_components/toastr/toastr.js"></script>
+    <script src="./bower_components/lodash/lodash.js"></script>
+
+    <!--cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.4.1/sha1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+
+    <!--module loader-->
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="./scripts/system-config.js"></script>
+    <script>
+        SystemJS.import('main');
+    </script>
+</body>
+</html>

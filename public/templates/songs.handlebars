@@ -1,0 +1,16 @@
+<div>
+    <ul id="all-songs" class="list-group">
+        {{#each all}}
+            <div id="song">
+                <li class="list-group-item">
+                    <h4>{{title}}</h4><br> {{#if description}}
+                    <small>{{description}}</small><br> {{else}}
+                    <small><em>No description</em></small><br> {{/if}}
+                    <a href="#/songs/{{id}}/comments" class="watch-song" data-url="{{url}}" data-id="{{id}}" data-stars="{{stars}}"><span class="glyphicon glyphicon-play"></span></a>
+                    <a class="glyphicon glyphicon-share-alt share-song" href="https://www.facebook.com/sharer/sharer.php?u={{url}}" target="_blank"></a>
+                    <span class="glyphicon glyphicon-star-empty pull-right" aria-hidden="true">{{stars}}</span>
+                </li>
+            </div>
+        {{/each}}
+    </ul>
+</div>

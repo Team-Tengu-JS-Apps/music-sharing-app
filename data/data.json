@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "username": "s",
+      "passHash": "c1c93f88d273660be5358cd4ee2df2c2f3f0e8e7",
+      "usernameLower": "s",
+      "authKey": "undefinedEmE&!b@=PpQ!TaCPKSOXwf&DRbwsQb#BwjujvCH(yWb_#xLgaFy",
+      "availableStars": 0,
+      "songs": [
+        {
+          "id": 168095,
+          "title": "Ladytron  True Mathematics",
+          "url": "https://www.youtube.com/watch?v=ZJQVte2rGBo",
+          "description": "Some description",
+          "stars": 1,
+          "comments": [
+            "Mnogo qka pesen!",
+            "Sucks ...",
+            "Stava",
+            "Fake Comment",
+            "ddd",
+            "sss",
+            "aaa",
+            "ddd",
+            "sss",
+            "&lt;script&gt;hack!&lt;/script&gt;"
+          ]
+        },
+        {
+          "id": 362637,
+          "title": "Bandolero Paris Latino",
+          "url": "https://www.youtube.com/watch?v=KZXfG_8sACs",
+          "description": "Bandolero rock",
+          "stars": 0,
+          "comments": []
+        },
+        {
+          "id": 607616,
+          "title": "Edelweiss",
+          "url": "https://www.youtube.com/watch?v=5rp8qGigqYk",
+          "description": " ",
+          "stars": 0,
+          "comments": [
+            "Az sum pesho",
+            "fgfg"
+          ]
+        },
+        {
+          "id": 929982,
+          "title": "DON QUICHOTTE ",
+          "url": "https://www.youtube.com/watch?v=tp7UcFuxfM0",
+          "description": "sancho panza",
+          "stars": 1,
+          "comments": []
+        },
+        {
+          "id": 839169,
+          "description": "",
+          "stars": 3,
+          "comments": [
+            "sss",
+            "aaa"
+          ]
+        },
+        {
+          "id": 963228,
+          "description": "",
+          "stars": 0,
+          "comments": []
+        },
+        {
+          "id": 311211,
+          "description": "",
+          "stars": 0,
+          "comments": []
+        }
+      ],
+      "comments": [],
+      "id": "5c3c464c-dad1-4015-ac54-e7c91776720f"
+    },
+    {
+      "username": "Ivan",
+      "passHash": "2ee115dcb37bfaaa2ddb0286bed449476eb10735",
+      "usernameLower": "ivan",
+      "authKey": "undefinediJZcVuMrm#opLZcf+L^loSSCX!YYj(zJT)fHNH(AT@(rpP*=LVD",
+      "availableStars": 0,
+      "songs": [],
+      "comments": [],
+      "id": "d68dd0c7-be40-46bc-871a-d34356fd9b78"
+    }
+  ],
+  "songs": [],
+  "users.songs": []
+}

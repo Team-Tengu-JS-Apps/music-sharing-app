@@ -1,0 +1,59 @@
+<input id="rate-song" type="checkbox" class="with-font"/>
+<label for="rate-song">Rate</label>
+
+<!--<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span>-->
+
+<div class="dropdown pull-right">
+    <button class="btn btn-default dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Stars
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">4</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">5</a></li>
+    </ul>
+</div>
+
+<span class="glyphicon glyphicon-star-empty pull-right stars-to-award" style="font-size: 18px;" aria-hidden="true">1</span>
+
+<div class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        {{#each all}}
+            {{#if @first}}
+            <div class="item active">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <blockquote class="card-blockquote">
+                            <p>{{this}}</p>
+                            <footer>Someone famous, perhaps is <cite
+                                    title="Source Title">Ivan</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+                <div class="item">
+                    <div class="card text-center">
+                        <div class="card-block">
+                            <blockquote class="card-blockquote">
+                                <p>{{this}}</p>
+                                <footer>Someone famous, perhaps is <cite title="Source Title">Stavri</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+
+        {{/each}}
+    </div>
+</div>
+
+<div class="input-group">
+    <textarea class="form-control custom-control tb-comment" rows="3" style="resize:none" placeholder="Leave a comment"></textarea>
+    <a href="#/songs/{{id}}/comment" class="send-comment input-group-addon btn">Send</a>
+</div>

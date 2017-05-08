@@ -5,7 +5,7 @@
       "passHash": "c1c93f88d273660be5358cd4ee2df2c2f3f0e8e7",
       "usernameLower": "s",
       "authKey": "undefinedEmE&!b@=PpQ!TaCPKSOXwf&DRbwsQb#BwjujvCH(yWb_#xLgaFy",
-      "availableStars": 1,
+      "availableStars": 0,
       "songs": [
         {
           "id": 168095,
@@ -45,16 +45,6 @@
           ]
         },
         {
-          "id": 753918,
-          "title": "Vrati mi go srceto",
-          "url": "https://www.youtube.com/watch?v=bYOsvAJnKLE",
-          "description": "Makedonsko nekvo",
-          "stars": 0,
-          "comments": [
-            "aaa"
-          ]
-        },
-        {
           "id": 929982,
           "title": "DON QUICHOTTE ",
           "url": "https://www.youtube.com/watch?v=tp7UcFuxfM0",
@@ -63,16 +53,13 @@
           "comments": []
         },
         {
-          "id": 820582,
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
           "id": 839169,
           "description": "",
-          "stars": 2,
-          "comments": []
+          "stars": 3,
+          "comments": [
+            "sss",
+            "aaa"
+          ]
         }
       ],
       "comments": [],

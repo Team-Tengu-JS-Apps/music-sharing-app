@@ -5,14 +5,14 @@
       "passHash": "c1c93f88d273660be5358cd4ee2df2c2f3f0e8e7",
       "usernameLower": "s",
       "authKey": "undefinedEmE&!b@=PpQ!TaCPKSOXwf&DRbwsQb#BwjujvCH(yWb_#xLgaFy",
-      "availableStars": 5,
+      "availableStars": 1,
       "songs": [
         {
           "id": 168095,
           "title": "Ladytron  True Mathematics",
           "url": "https://www.youtube.com/watch?v=ZJQVte2rGBo",
           "description": "Some description",
-          "stars": 0,
+          "stars": 1,
           "comments": [
             "Mnogo qka pesen!",
             "Sucks ...",
@@ -21,7 +21,9 @@
             "ddd",
             "sss",
             "aaa",
-            "ddd"
+            "ddd",
+            "sss",
+            "&lt;script&gt;hack!&lt;/script&gt;"
           ]
         },
         {
@@ -57,25 +59,19 @@
           "title": "DON QUICHOTTE ",
           "url": "https://www.youtube.com/watch?v=tp7UcFuxfM0",
           "description": "sancho panza",
-          "stars": 0,
+          "stars": 1,
           "comments": []
         },
         {
-          "id": 420245,
+          "id": 820582,
           "description": "",
           "stars": 0,
           "comments": []
         },
         {
-          "id": 439933,
+          "id": 839169,
           "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 617534,
-          "description": "",
-          "stars": 0,
+          "stars": 2,
           "comments": []
         }
       ],

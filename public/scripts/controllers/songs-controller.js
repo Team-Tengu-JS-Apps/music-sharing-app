@@ -3,6 +3,7 @@ import {dataService} from 'data';
 import {templateLoader} from 'templates';
 
 const songsController = (function () {
+    const ERROR_MESSAGE = 'Oops! Something went wrong.';
 
     function get(context) {
         let result = {};
@@ -15,7 +16,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.responseJSON);
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
             });
     }
 
@@ -32,7 +33,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.responseJSON);
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
             });
     }
 
@@ -59,6 +60,9 @@ const songsController = (function () {
 
                     context.redirect('#/songs/add/query');
                 });
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
             });
     }
 
@@ -75,7 +79,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.responseJSON);
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
             });
     }
 
@@ -93,7 +97,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.responseJSON);
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
             });
     }
 
@@ -119,15 +123,31 @@ const songsController = (function () {
                 aside.html(template(result));
             })
             .then(function () {
+                $(".dropdown-toggle").dropdown();
                 $('.carousel').carousel();
+                $('.dropdown-menu').on('click', 'a', function (event) {
+                    const $target = $(event.target);
+                    $('.stars-to-award').html($target.html());
+                });
+                $('#rate-song').on('click', function (event) {
+                    if ($(event.currentTarget).is(':checked')) {
+                        const stars = $('.stars-to-award').html();
+                        dataService.songs.rate(id, +stars)
+                            .then(function (template) {
+                                toastr.success(`${stars} stars awarded to song`);
+                            })
+                            .catch(function (err) {
+                                toastr.error(err.responseJSON || ERROR_MESSAGE);
+                            });
+                    }
+                });
             })
             .catch(function (err) {
-                toastr.error(err.responseJSON);
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
             });
     }
 
     function comment(context) {
-        let result = {};
         const url = window.location.href;
         const urlParts = url.split('/');
         const id = urlParts[urlParts.length - 2];
@@ -138,14 +158,15 @@ const songsController = (function () {
             return;
         }
 
-        const comment = $commentBox.val();
+        const comment = $('<div/>').text($commentBox.val()).html();
+
         dataService.songs.comment(id, comment)
             .then(function (resp) {
                 toastr.success("Comment added successfully!");
                 context.redirect(`#/songs/${id}/comments`);
             })
             .catch(function (err) {
-                toastr.error(err.responseJSON);
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
             });
     }
 
@@ -163,7 +184,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.responseJSON);
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
             });
     }
 
@@ -181,7 +202,7 @@ const songsController = (function () {
                 context.$element().html(template(result));
             })
             .catch(function (err) {
-                toastr.error(err.responseJSON);
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
             });
     }
 

@@ -50,5 +50,10 @@ import {youTubeController} from 'youtube-controller';
                 scrollTop: 0
             });
         });
+
+        const $carousel = $('.carousel');
+        if ($carousel.length) {
+            $carousel.carousel();
+        }
     });
 }());

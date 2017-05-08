@@ -17,9 +17,9 @@
 
 <body>
     <div id="root">
-        <header class="container">
+        <header class="container-fluid">
             <div class="row">
-                <div class="page-header col-xs-12">
+                <div class="page-header container-fluid">
                     <div class="pull-left">
                         <h1>
                             <img src="logo.png" width="50" height="50" srcset="./images/tengu-logo.svg" alt="music app logo">                            MelodyUnderdog
@@ -58,13 +58,13 @@
             </div>
 
             <nav id="main-nav" class="navbar navbar-default navbar-collapse hidden row">
-                <ul class="nav navbar-nav col-xs-12">
+                <ul class="nav navbar-nav container-fluid">
                     <li><a href="#/">Home</a></li>
                     <li><a href="#/songs/all">All Songs</a></li>
                     <li><a href="#/songs">My Songs</a></li>
                     <!--Uncomment to test routes-->
                     <!--<li><a href="#/songs/794080">Test API</a></li>-->
-                    <!--<li><a href="#/songs/794080/del">Test API</a></li>-->
+                    <li><a href="#/songs/708656/del">Test API</a></li>
                     <!--<li><a href="#/songs/794080/comments">Test API</a></li>-->
                     <!--<li><a href="#/songs/325994/comment">Test API</a></li>-->
                     <!--<li><a href="#/songs/325994/rate">Test API</a></li>-->
@@ -74,7 +74,7 @@
         </header>
     </div>
 
-    <div id="iframe" class="col-xl-12">
+    <div id="iframe" class="container-fluid">
         <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yoHYaS12lgY"></iframe>
         </div>
@@ -82,7 +82,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="container-fluid">
                 <div id="content">
 
                     <!--Main content goes here !-->
@@ -90,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="col-md-12">
+            <div class="container-fluid">
                 <aside id="right">
                     <input id="box-id" type="checkbox" class="with-font" />
 

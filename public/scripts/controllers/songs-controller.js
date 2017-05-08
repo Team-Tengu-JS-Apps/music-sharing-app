@@ -190,6 +190,17 @@ const songsController = (function () {
             });
     }
 
+    function loadTop(context) {
+        let result = {};
+        templateLoader.get('songs-tops')
+            .then(function (template) {
+                context.$element().html(template(result));
+            })
+            .catch(function (err) {
+                toastr.error(err.responseJSON || ERROR_MESSAGE);
+            });
+    }
+
     function getTop(context) {
         let result = {};
         const url = window.location.href;
@@ -218,7 +229,7 @@ const songsController = (function () {
                 return new Promise(function (resolve, reject) {
                     setTimeout(function () {
                         resolve();
-                    }, 2000);
+                    }, 1000);
                 });
             })
             .then(function () {
@@ -239,6 +250,7 @@ const songsController = (function () {
         comment: comment,
         rate: rate,
         top: getTop,
+        tops: loadTop,
         embed: embed
     };
 }());

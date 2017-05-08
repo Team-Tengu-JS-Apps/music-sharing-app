@@ -23,7 +23,8 @@
             "aaa",
             "ddd",
             "sss",
-            "&lt;script&gt;hack!&lt;/script&gt;"
+            "&lt;script&gt;hack!&lt;/script&gt;",
+            "s"
           ]
         },
         {
@@ -32,7 +33,9 @@
           "url": "https://www.youtube.com/watch?v=KZXfG_8sACs",
           "description": "Bandolero rock",
           "stars": 0,
-          "comments": []
+          "comments": [
+            "ssss"
+          ]
         },
         {
           "id": 607616,
@@ -42,7 +45,8 @@
           "stars": 0,
           "comments": [
             "Az sum pesho",
-            "fgfg"
+            "fgfg",
+            "d"
           ]
         },
         {
@@ -51,15 +55,8 @@
           "url": "https://www.youtube.com/watch?v=tp7UcFuxfM0",
           "description": "sancho panza",
           "stars": 1,
-          "comments": []
-        },
-        {
-          "id": 839169,
-          "description": "",
-          "stars": 3,
           "comments": [
-            "sss",
-            "aaa"
+            "dddd"
           ]
         },
         {
@@ -72,13 +69,9 @@
           "id": 311211,
           "description": "",
           "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 423293,
-          "description": "",
-          "stars": 0,
-          "comments": []
+          "comments": [
+            "dd"
+          ]
         }
       ],
       "comments": [],

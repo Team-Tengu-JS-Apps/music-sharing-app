@@ -4,7 +4,6 @@ import {usersController} from 'users-controller';
 import {songsController} from 'songs-controller';
 import {youTubeController} from 'youtube-controller';
 import {controllerHelpers} from 'controller-helpers';
-import {templateLoader} from 'templates';
 
 (function () {
 
@@ -22,6 +21,7 @@ import {templateLoader} from 'templates';
         this.get('#/songs/:id/del', songsController.del);
         this.get('#/songs/:id/comments', songsController.comments);
         this.get('#/songs/:id/comment', songsController.comment);
+        this.get('#/songs/tops', songsController.tops);
         this.get('#/songs/top/:count', songsController.top);
 
         this.get('#/songs/add/query', youTubeController.query);
@@ -50,8 +50,7 @@ import {templateLoader} from 'templates';
         $('#content').on('click', '.watch-song', function (event) {
             const $target = $(this);
 
-
-            let wait = function (time) {
+            let waitToScroll = function (time) {
                 return new Promise((resolve, reject) => {
                     resolve($('html, body').animate({
                         scrollTop: 0
@@ -59,16 +58,12 @@ import {templateLoader} from 'templates';
                 });
             };
 
-            /*$('html, body').animate({
-                scrollTop: 0
-            });*/
-            wait()
+            waitToScroll()
                 .then(function () {
                     const urlOfSong = $target.data("url");
                     const urlToEmbed = controllerHelpers.convertSrcToEmbed(urlOfSong);
                     songsController.embed(urlToEmbed);
                 });
-
         });
 
         const $carousel = $('.carousel');

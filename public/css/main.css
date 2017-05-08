@@ -10,7 +10,7 @@ body {
     margin-top: 30px;
 }
 
-#remove-song, #share-song {
+#remove-song, #share-song, #comment-song {
     text-decoration: none;
     color: black;
 }

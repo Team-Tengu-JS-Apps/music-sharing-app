@@ -1,6 +1,6 @@
-import {controllerHelpers} from 'controller-helpers';
-import {dataService} from 'data';
-import {templateLoader} from 'templates';
+import { controllerHelpers } from 'controller-helpers';
+import { dataService } from 'data';
+import { templateLoader } from 'templates';
 
 const songsController = (function () {
 
@@ -128,20 +128,38 @@ const songsController = (function () {
     }
 
     function comment(context) {
-        let result = {};
-        const url = window.location.href;
-        const urlParts = url.split('/');
-        const id = urlParts[urlParts.length - 2];
-        dataService.tests.comment(id, "Fake Comment")
-            .then(function (resp) {
-                result.all = JSON.stringify(resp);
-                return templateLoader.get('tests');
-            })
+
+        templateLoader.get('song-comment')
             .then(function (template) {
-                context.$element().html(template(result));
+                context.$element()
+                    .html(template());
+                return Promise.resolve();
             })
-            .catch(function (err) {
-                toastr.error(err.responseJSON);
+            .then(function () {
+                $('#comment-song')
+                    .bootstrapValidator({
+                        live: 'enabled',
+                        trigger: null
+                    });
+                $('#btn-song-comment').on('click', function (event) {
+
+                    let result = {};
+                    const comment = $('#tb-song-comment').val();
+                    const url = window.location.href;
+                    const urlParts = url.split('/');
+                    const id = urlParts[urlParts.length - 2];
+                    dataService.tests.comment(id, comment)
+                        .then(function (resp) {
+                            result.all = JSON.stringify(resp);
+                            return templateLoader.get('tests');
+                        })
+                        .then(function (template) {
+                            context.$element().html(template(result));
+                        })
+                        .catch(function (err) {
+                            toastr.error(err.responseJSON);
+                        });
+                });
             });
     }
 
@@ -194,4 +212,4 @@ const songsController = (function () {
     };
 }());
 
-export {songsController};
+export { songsController };

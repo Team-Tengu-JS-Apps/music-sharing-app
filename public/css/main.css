@@ -3,11 +3,16 @@
 body {
     min-height: 400px;
     clear: both;
-    margin-bottom: 100px;
+    margin: 50px;
 }
 
 #song {
     margin-top: 30px;
+}
+
+#remove-song {
+    text-decoration: none;
+    color: black;
 }
 
 #iframe {

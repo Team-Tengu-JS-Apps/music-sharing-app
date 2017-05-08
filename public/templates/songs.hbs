@@ -7,7 +7,7 @@
                 <small>{{description}}</small><br> {{else}}
                 <small><em>No description</em></small><br> {{/if}}
                 <span id="watch-song" type="button" class="glyphicon glyphicon-play" data-url="{{url}}" data-id="{{id}}"></span>
-                <span id="share-song" type="button" class="glyphicon glyphicon-share-alt" data-url="{{url}}" data-id="{{id}}"></span>
+                <a id="share-song" type="button" class="glyphicon glyphicon-share-alt" href="https://www.facebook.com/sharer/sharer.php?u={{url}}" target="_blank"></a>
                 <span class="glyphicon glyphicon-star-empty pull-right" aria-hidden="true">{{stars}}</span>
             </li>
         </div>

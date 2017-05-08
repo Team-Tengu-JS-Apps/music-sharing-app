@@ -1,0 +1,37 @@
+<input id="box-id" type="checkbox" class="with-font"/>
+<label for="box-id">Rate</label>
+
+<div class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        {{#each all}}
+            {{#if @first}}
+            <div class="item active">
+                <div class="card text-center">
+                    <div class="card-block">
+                        <blockquote class="card-blockquote">
+                            <p>{{this}}</p>
+                            <footer>Someone famous, perhaps is <cite
+                                    title="Source Title">Ivan</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            {{else}}
+                <div class="item">
+                    <div class="card text-center">
+                        <div class="card-block">
+                            <blockquote class="card-blockquote">
+                                <p>{{this}}</p>
+                                <footer>Someone famous, perhaps is <cite title="Source Title">Stavri</cite>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            {{/if}}
+
+        {{/each}}
+    </div>
+</div>

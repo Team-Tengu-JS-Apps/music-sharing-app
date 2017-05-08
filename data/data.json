@@ -8,64 +8,46 @@
       "availableStars": 5,
       "songs": [
         {
-          "id": 13261,
-          "title": "aaaaaaaaaaaaa",
-          "url": "https://www.youtube.com/watch?v=yTqrkJAosho",
-          "description": "dd",
+          "id": 168095,
+          "title": "Ladytron  True Mathematics",
+          "url": "https://www.youtube.com/watch?v=ZJQVte2rGBo",
+          "description": "Some description",
           "stars": 0,
-          "comments": []
+          "comments": [
+            "Mnogo qka pesen!",
+            "Sucks ...",
+            "Stava"
+          ]
         },
         {
-          "id": 24616,
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 53169,
-          "title": "aaaaaaaaaaaaa",
-          "url": "https://www.youtube.com/watch?v=yTqrkJAosho",
-          "description": "dddddddddddddddd",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 386126,
-          "title": "dddsssss",
-          "url": "https://www.youtube.com/watch?v=yTqrkJAosho",
-          "description": "s",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 270076,
-          "title": "sdsdsdsdsd",
-          "url": "https://www.youtube.com/watch?v=yTqrkJAosho",
-          "description": "ff",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 62423,
-          "title": "ssssdddd",
+          "id": 362637,
+          "title": "Bandolero Paris Latino",
           "url": "https://www.youtube.com/watch?v=KZXfG_8sACs",
-          "description": "aaaass",
+          "description": "Bandolero rock",
           "stars": 0,
           "comments": []
         },
         {
-          "id": 562097,
-          "title": "dddsssss",
-          "url": "https://www.youtube.com/watch?v=KZXfG_8sACs",
-          "description": "dddddddddddddddd",
+          "id": 607616,
+          "title": "Edelweiss",
+          "url": "https://www.youtube.com/watch?v=5rp8qGigqYk",
+          "description": " ",
           "stars": 0,
           "comments": []
         },
         {
-          "id": 590196,
-          "title": "Paris Latino",
-          "url": "https://www.youtube.com/watch?v=KZXfG_8sACs",
-          "description": "dddd",
+          "id": 753918,
+          "title": "Vrati mi go srceto",
+          "url": "https://www.youtube.com/watch?v=bYOsvAJnKLE",
+          "description": "Makedonsko nekvo",
+          "stars": 0,
+          "comments": []
+        },
+        {
+          "id": 929982,
+          "title": "DON QUICHOTTE ",
+          "url": "https://www.youtube.com/watch?v=tp7UcFuxfM0",
+          "description": "sancho panza",
           "stars": 0,
           "comments": []
         }
@@ -79,54 +61,9 @@
       "usernameLower": "ivan",
       "authKey": "undefinediJZcVuMrm#opLZcf+L^loSSCX!YYj(zJT)fHNH(AT@(rpP*=LVD",
       "availableStars": 0,
-      "songs": [
-        {
-          "id": 491357,
-          "title": "The Flirts",
-          "url": "https://www.youtube.com/watch?v=xdEyZ3-OjU8",
-          "description": "the flirts",
-          "stars": 12,
-          "comments": []
-        }
-      ],
+      "songs": [],
       "comments": [],
       "id": "d68dd0c7-be40-46bc-871a-d34356fd9b78"
-    },
-    {
-      "username": "d",
-      "passHash": "388ad1c312a488ee9e12998fe097f2258fa8d5ee",
-      "usernameLower": "d",
-      "authKey": "undefinedVwb+VahMqlQf-Z*Uz#QeJzCpjbVn%swDc#qHHSfTL+m@Mfi(&#Q",
-      "availableStars": 5,
-      "songs": [],
-      "id": "03fecd7d-cf6e-47ae-9b86-0cb99ccc541a"
-    },
-    {
-      "username": "Peshobe",
-      "passHash": "515c6adfc8f7a305f2ea4bb1b8d920f9486b0d6d",
-      "usernameLower": "peshobe",
-      "authKey": "undefinedhGBzhMx*Mb*PYEPCS=BNsMwfgdLXiMMmqgJ*TCDd*vE*nNtzJcz",
-      "availableStars": 5,
-      "songs": [],
-      "id": "92b0d830-34cb-46c1-a7f1-269ce40a65d1"
-    },
-    {
-      "username": "gosho12",
-      "passHash": "ce669da0e1b2c44b9fdef610e447d136951667e6",
-      "usernameLower": "gosho12",
-      "authKey": "undefinedHznD=lmeA_zUw#Nc(HsWaIgmFnwp_*r%R%^ZqSuYe$i@)W(eGcf",
-      "availableStars": 5,
-      "songs": [],
-      "id": "19043623-d0df-49e5-8b50-84e672f77cca"
-    },
-    {
-      "username": "ssssaaa",
-      "passHash": "716242dcaf606580807e4de318de1eda382fcc6f",
-      "usernameLower": "ssssaaa",
-      "authKey": "undefinedQmc($DLOxnjruTOvWWqmSZEcNyZ&aEN&+-U)MINPSRRWRaejPU%",
-      "availableStars": 5,
-      "songs": [],
-      "id": "f9f7f411-9d16-463d-927e-a4ec00b2946d"
     }
   ],
   "songs": [],

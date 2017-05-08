@@ -58,18 +58,6 @@ const songsController = (function () {
                     }
 
                     context.redirect('#/songs/add/query');
-
-                    /*const song = {
-                        title: $('#tb-song-title').val(),
-                        url: $('#tb-song-url').val(),
-                        description: $('#tb-song-description').val()
-                    };
-
-                    dataService.songs.add(song)
-                        .then(function (resp) {
-                            toastr.success(`Song "${song.title}" added!`);
-                            context.redirect('#/songs');
-                        });*/
                 });
             });
     }
@@ -114,13 +102,23 @@ const songsController = (function () {
         const url = window.location.href;
         const urlParts = url.split('/');
         const id = urlParts[urlParts.length - 2];
-        dataService.tests.comments(id)
+
+        dataService.songs.comments(id)
             .then(function (resp) {
-                result.all = JSON.stringify(resp);
-                return templateLoader.get('tests');
+                if (resp.length === 0) {
+                    resp = resp.concat(['Be the first to leave a comment', 'Sorry, no comment', 'First fake comment']);
+                }
+                result.all = resp;
+                return templateLoader.get('songs-aside');
             })
             .then(function (template) {
-                context.$element().html(template(result));
+                const aside = context.$element()
+                    .closest('.container')
+                    .find('#right');
+                aside.html(template(result));
+            })
+            .then(function () {
+                $('.carousel').carousel();
             })
             .catch(function (err) {
                 toastr.error(err.responseJSON);

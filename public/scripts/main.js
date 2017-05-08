@@ -44,5 +44,11 @@ import {youTubeController} from 'youtube-controller';
                 usersController.signIn();
             });
         }
+
+        $('#content').on('click', 'a.watch-song', function (e) {
+            $('html, body').animate({
+                scrollTop: 0
+            });
+        });
     });
 }());

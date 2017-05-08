@@ -183,6 +183,9 @@ h4 {
     color: #138E81;
 }
 
-
-
+.send-comment:hover {
+    background-color: #77D2C8;
+    border: none;
+    color:white;
+}
 

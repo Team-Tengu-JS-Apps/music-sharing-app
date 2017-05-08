@@ -222,7 +222,8 @@ const dataService = (function () {
             all: getAllSongs,
             add: addSong,
             getTop: getTopSongs,
-            comments: getComments
+            comments: getComments,
+            comment: postComment
         },
         ytData: {
           query

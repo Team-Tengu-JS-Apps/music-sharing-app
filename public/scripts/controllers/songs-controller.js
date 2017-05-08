@@ -108,6 +108,7 @@ const songsController = (function () {
                 if (resp.length === 0) {
                     resp = resp.concat(['Be the first to leave a comment', 'Sorry, no comment', 'First fake comment']);
                 }
+                result.id = id;
                 result.all = resp;
                 return templateLoader.get('songs-aside');
             })
@@ -130,13 +131,18 @@ const songsController = (function () {
         const url = window.location.href;
         const urlParts = url.split('/');
         const id = urlParts[urlParts.length - 2];
-        dataService.tests.comment(id, "Fake Comment")
+
+        const $commentBox = $('.tb-comment');
+        if (!$commentBox.length) {
+            toastr.error("Unable to add a comment");
+            return;
+        }
+
+        const comment = $commentBox.val();
+        dataService.songs.comment(id, comment)
             .then(function (resp) {
-                result.all = JSON.stringify(resp);
-                return templateLoader.get('tests');
-            })
-            .then(function (template) {
-                context.$element().html(template(result));
+                toastr.success("Comment added successfully!");
+                context.redirect(`#/songs/${id}/comments`);
             })
             .catch(function (err) {
                 toastr.error(err.responseJSON);

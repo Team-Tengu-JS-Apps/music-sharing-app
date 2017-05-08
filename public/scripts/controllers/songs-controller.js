@@ -60,6 +60,8 @@ const songsController = (function () {
 
                     context.redirect('#/songs/add/query');
                 });
+
+
             })
             .catch(function (err) {
                 toastr.error(err.responseJSON || ERROR_MESSAGE);
@@ -206,6 +208,27 @@ const songsController = (function () {
             });
     }
 
+    function embed(url) {
+        const $embedContainer = $('.embed-container');
+        templateLoader.get('songs-embed')
+            .then(function (template) {
+                $embedContainer.addClass('loader');
+                $embedContainer.html(template({url: url}));
+
+                return new Promise(function (resolve, reject) {
+                    setTimeout(function () {
+                        resolve();
+                    }, 2000);
+                });
+            })
+            .then(function () {
+                $embedContainer.removeClass('loader');
+            })
+            .catch(function (err) {
+                toastr.error('Unable to embed video');
+            });
+    }
+
     return {
         get: get,
         all: all,
@@ -215,7 +238,8 @@ const songsController = (function () {
         comments: comments,
         comment: comment,
         rate: rate,
-        top: getTop
+        top: getTop,
+        embed: embed
     };
 }());
 

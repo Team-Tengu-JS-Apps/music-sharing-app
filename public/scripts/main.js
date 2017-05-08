@@ -3,6 +3,8 @@ import {homeController} from 'home-controller';
 import {usersController} from 'users-controller';
 import {songsController} from 'songs-controller';
 import {youTubeController} from 'youtube-controller';
+import {controllerHelpers} from 'controller-helpers';
+import {templateLoader} from 'templates';
 
 (function () {
 
@@ -45,10 +47,28 @@ import {youTubeController} from 'youtube-controller';
             });
         }
 
-        $('#content').on('click', 'a.watch-song', function (e) {
-            $('html, body').animate({
+        $('#content').on('click', '.watch-song', function (event) {
+            const $target = $(this);
+
+
+            let wait = function (time) {
+                return new Promise((resolve, reject) => {
+                    resolve($('html, body').animate({
+                        scrollTop: 0
+                    }));
+                });
+            };
+
+            /*$('html, body').animate({
                 scrollTop: 0
-            });
+            });*/
+            wait()
+                .then(function () {
+                    const urlOfSong = $target.data("url");
+                    const urlToEmbed = controllerHelpers.convertSrcToEmbed(urlOfSong);
+                    songsController.embed(urlToEmbed);
+                });
+
         });
 
         const $carousel = $('.carousel');

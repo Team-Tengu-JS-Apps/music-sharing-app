@@ -55,7 +55,8 @@ const controllerHelpers = function () {
 
     return {
         parseIdFromYoutubeURL,
-        evaluateUnderdogStatus
+        evaluateUnderdogStatus,
+        convertSrcToEmbed
     };
 }();
 

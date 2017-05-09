@@ -1,6 +1,9 @@
 ##  Description:
 
-YT Music Video Share App
+YT Music Video Share App:
+
+#### [https://melody-underdogen.herokuapp.com/#/](https://melody-underdogen.herokuapp.com/#/)
+
 
 * Users can be registered and signed in the application
   * Users provide username and password
@@ -9,15 +12,14 @@ YT Music Video Share App
 
 * Signed in users can:
   * Add a YouTube link to a song video:
-    * Song items have title, description and link
+    * Song items have title, description and valid link
   * Comment under an item
   * Give stars to an item
 
-Song items can be sorted by date and username. Users can
-add a song. Only five stars to give per day. Only older songs with low
-views can be added (data queried from YT's data API).
-The lower the views and upload year, the higher the starting stars/underdog modifier. Comments are anonymous, one random comment is displayed
-under the "watch video" box (slider). See also the initial design.png.
+Users can add a song. Only five stars to give per day. Only older songs with low
+views and rating can be added (data queried from YT's data API).
+The lower the views/likes, the higher the starting stars/underdog modifier. Comments are anonymous, one random comment is displayed
+under the "watch video" box (carousel).
 
 ## Routes
  #### Node Server

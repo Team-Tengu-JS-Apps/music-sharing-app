@@ -4,7 +4,7 @@ YT Music Video Share App:
 
 #### [https://melody-underdogen.herokuapp.com/#/](https://melody-underdogen.herokuapp.com/#/)
 
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Alt text](tengu-app.png)
 
 * Users can be registered and signed in the application
   * Users provide username and password

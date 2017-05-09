@@ -1,0 +1,37 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/data.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/main.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-sign-out.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-sign-in.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-register.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-logo.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-embed.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/controllers/youtube-controller.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/controllers/users-controller.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/controllers/songs-controller.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/controllers/helpers/controller-helpers.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/controllers/home-controller.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/system-config.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/data.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/main.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-sign-out.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-sign-in.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-register.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-logo.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-embed.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/youtube-controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/users-controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/songs-controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/helpers/controller-helpers.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/home-controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/system-config.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

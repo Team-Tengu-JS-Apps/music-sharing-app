@@ -4,13 +4,16 @@
   "description": "Music share application",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "prestart": "npm install",
+    "preinstall": "npm install ./public --prefix ./public",
+    "install": "bower install"
   },
   "author": "Nikolai Valkov <ndvalkov@abv.bg>",
   "contributors": [
     {
-      "name": "",
-      "email": ""
+      "name": "Rumen Sechkov",
+      "email": "rumensechkov@yahoo.com"
     }
   ],
   "repository": {
@@ -24,5 +27,8 @@
     "lodash": "^3.10.1",
     "lowdb": "^0.10.2",
     "underscore-db": "^0.9.0"
+  },
+  "engines": {
+    "node": "6.10.2"
   }
 }

@@ -23,7 +23,9 @@
             "aaa",
             "ddd",
             "sss",
-            "&lt;script&gt;hack!&lt;/script&gt;"
+            "&lt;script&gt;hack!&lt;/script&gt;",
+            "s",
+            "sss"
           ]
         },
         {
@@ -32,47 +34,10 @@
           "url": "https://www.youtube.com/watch?v=KZXfG_8sACs",
           "description": "Bandolero rock",
           "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 607616,
-          "title": "Edelweiss",
-          "url": "https://www.youtube.com/watch?v=5rp8qGigqYk",
-          "description": " ",
-          "stars": 0,
           "comments": [
-            "Az sum pesho",
-            "fgfg"
+            "ssss",
+            "dddd"
           ]
-        },
-        {
-          "id": 929982,
-          "title": "DON QUICHOTTE ",
-          "url": "https://www.youtube.com/watch?v=tp7UcFuxfM0",
-          "description": "sancho panza",
-          "stars": 1,
-          "comments": []
-        },
-        {
-          "id": 839169,
-          "description": "",
-          "stars": 3,
-          "comments": [
-            "sss",
-            "aaa"
-          ]
-        },
-        {
-          "id": 963228,
-          "description": "",
-          "stars": 0,
-          "comments": []
-        },
-        {
-          "id": 311211,
-          "description": "",
-          "stars": 0,
-          "comments": []
         }
       ],
       "comments": [],
@@ -87,24 +52,6 @@
       "songs": [],
       "comments": [],
       "id": "d68dd0c7-be40-46bc-871a-d34356fd9b78"
-    },
-    {
-      "username": "rumensechkov",
-      "passHash": "a27498edd9b6c51fa4c2f0e049e5b30e73f3679d",
-      "usernameLower": "rumensechkov",
-      "authKey": "undefined+XspdeYM_lyIxY+)LlIYMjEvheN!VTZ!Vx)kyEPlYkL#@)Hy-T&",
-      "availableStars": 5,
-      "songs": [
-        {
-          "id": 296621,
-          "title": "AAAAAAA",
-          "url": "https://www.youtube.com/watch?v=yoHYaS12lgY",
-          "description": "AAAAAA",
-          "stars": 0,
-          "comments": []
-        }
-      ],
-      "id": "93de8fd7-2071-4632-a1d6-3b237e452d7c"
     }
   ],
   "songs": [],

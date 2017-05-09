@@ -14,15 +14,17 @@
 
     <link rel="stylesheet" href="./css/main.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.0-rc.8/webcomponents-lite.js"></script>
+    <script src="shim/native-shim.js"></script><!--chrome, firefox, safari etc.. -->
+    <script src="shim/native-shim-es5.js"></script>
 </head>
 <body>
     <div id="root">
-
         <header class="container">
             <div class="row">
                 <div class="page-header col-md-4">
 
-                    <img src="logo.png" width="50" height="50" srcset="./images/tengu-logo.svg" alt="music app logo">
+                    <img src="./images/logo.png" width="50" height="50" srcset="./images/tengu-logo.svg" alt="music app logo">
 
                     <h1>MelodyUnderdog</h1>
                     <h3>
@@ -180,5 +182,8 @@
     <script>
         SystemJS.import('main');
     </script>
+
+    <!--custom components-->
+
 </body>
 </html>

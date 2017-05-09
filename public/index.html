@@ -14,16 +14,17 @@
 
     <link rel="stylesheet" href="./css/main.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.0-rc.8/webcomponents-lite.js"></script>
-    <script src="shim/native-shim.js"></script><!--chrome, firefox, safari etc.. -->
-    <script src="shim/native-shim-es5.js"></script>
+    <!--Shim for shadow dom in Firefox -->
+    <script src="./shim/shadydom.min.js"></script>
+    <!--Polyfill for custom elements-->
+    <script src="./shim/custom-elements.min.js"></script>
 </head>
 <body>
     <div id="root">
         <header class="container">
             <div class="row">
                 <div class="page-header col-md-4">
-
+                    <!--<tengu-logo></tengu-logo>-->
                     <img src="./images/logo.png" width="50" height="50" srcset="./images/tengu-logo.svg" alt="music app logo">
 
                     <h1>MelodyUnderdog</h1>
@@ -34,6 +35,7 @@
 
                 <div class="col-md-3">
                     <div class="top">
+                        <!--<tengu-logo></tengu-embed>-->
                         <div class="embed-container">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <iframe class="embed-responsive-item"
@@ -44,7 +46,7 @@
                 </div>
 
                 <form class="form-inline col-md-3 hidden" id="container-sign-in">
-
+                    <!--<tengu-sign-in></tengu-sign-in>-->
                     <div class="form-group pull-right">
                         <input type="text" class="form-control" id="tb-username" name="username"
                                placeholder="Username"/>
@@ -64,9 +66,12 @@
                         <a href="#/users/register" class="text-primary"> or Register</a>
                         <button id="btn-sign-in" class="suit_and_tie">Sign in</button>
                     </div>
+
                 </form>
+
                 <!--Sign out container-->
                 <form class="form-inline col-md-6 hidden" id="container-sign-out">
+                    <!--<tengu-sign-out></tengu-sign-out>-->
                     <button id="btn-sign-out" class="suit_and_tie pull-right">Sign out</button>
 
                     <button type="button" class="btn btn-default btn-md pull-right">
@@ -184,6 +189,8 @@
     </script>
 
     <!--custom components-->
+    <!--<script src="./release/tengu-logo.js"></script>-->
+    <script src="./scripts/tengu/tengu-logo.js"></script>
 
 </body>
 </html>

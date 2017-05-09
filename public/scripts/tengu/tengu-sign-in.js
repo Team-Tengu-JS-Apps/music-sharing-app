@@ -1,4 +1,4 @@
-class TenguLogo extends HTMLElement {
+class TenguSignIn extends HTMLElement {
     constructor() {
         // Always call super first in constructor
         super();
@@ -14,7 +14,7 @@ class TenguLogo extends HTMLElement {
     }
 
     connectedCallback() {
-        templateLoader.get(`tengu-logo`)
+        templateLoader.get(`tengu-sign-in`)
             .then(function (template) {
                 return new Promise(function (resolve, reject) {
                     setTimeout(function () {
@@ -35,11 +35,11 @@ class TenguLogo extends HTMLElement {
 
     attributeChangedCallback(attr, oldVal, newVal) {
         /*if (attr === `tengu-logo`) {
-            template(`tengu-logo`);
-        } else if () {
+         template(`tengu-logo`);
+         } else if () {
 
-        }*/
+         }*/
     }
 }
 
-customElements.define("tengu-logo", TenguLogo);
+customElements.define("tengu-sign-in", TenguSignIn);

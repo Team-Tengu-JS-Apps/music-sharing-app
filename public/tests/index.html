@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../libs/mocha/mocha.css">
+
+    <title>Tengu Music App Tests</title>
+</head>
+
+<body>
+    <div id="mocha"></div>
+
+    <!--Testing-->
+    <script src="../../libs/mocha/mocha.js"></script>
+    <script src="../../libs/chai/chai.js"></script>
+    <script src="../../libs/sinon/pkg/sinon.js"></script>
+    <script src="../../libs/sinon-chai/lib/sinon-chai.js"></script>
+
+    <!-- libs -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/bootstrap/js/carousel.js"></script>
+    <script src="../bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="../bower_components/handlebars/handlebars.js"></script>
+    <script src="../bower_components/sammy/lib/sammy.js"></script>
+    <script src="../bower_components/toastr/toastr.js"></script>
+    <script src="../bower_components/lodash/lodash.js"></script>
+
+    <!--cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.4.1/sha1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+
+    <!--module loader-->
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/requester.js"></script>
+
+    <!--Unit Tests-->
+    <script>
+        mocha.setup('bdd');
+        const { expect } = chai;
+    </script>
+
+    <script src="./data-tests.js"></script>
+
+    <script>
+        mocha.run();
+    </script>
+</body>
+
+</html>

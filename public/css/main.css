@@ -1,9 +1,10 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
 
 body {
-    min-height: 400px;
+    min-height: 800px;
     clear: both;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    background-image: linear-gradient(to top, #d5dee7 0%, #ffafbd 0%, #c9ffbf 100%);
 }
 
 #container-sign-out {

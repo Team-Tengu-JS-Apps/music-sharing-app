@@ -14,6 +14,8 @@
         <item url="file://$PROJECT_DIR$/dist/public/scripts/controllers/songs-controller.js" />
         <item url="file://$PROJECT_DIR$/dist/public/scripts/controllers/helpers/controller-helpers.js" />
         <item url="file://$PROJECT_DIR$/dist/public/scripts/controllers/home-controller.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/templates.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/scripts/requester.js" />
         <item url="file://$PROJECT_DIR$/dist/public/scripts/system-config.js" />
       </sourceFilesUrls>
     </properties>
@@ -30,6 +32,8 @@
       <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/songs-controller.js" />
       <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/helpers/controller-helpers.js" />
       <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/home-controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/templates.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/requester.js" />
       <root url="file://$PROJECT_DIR$/dist/public/scripts/system-config.js" />
     </CLASSES>
     <SOURCES />

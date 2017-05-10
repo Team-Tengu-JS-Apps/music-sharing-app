@@ -35,6 +35,21 @@
       <root url="file://$PROJECT_DIR$/dist/public/scripts/templates.js" />
       <root url="file://$PROJECT_DIR$/dist/public/scripts/requester.js" />
       <root url="file://$PROJECT_DIR$/dist/public/scripts/system-config.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/data.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/main.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-sign-out.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-sign-in.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-register.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-logo.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/tengu/tengu-embed.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/youtube-controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/users-controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/songs-controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/helpers/controller-helpers.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/controllers/home-controller.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/templates.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/requester.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/scripts/system-config.js" />
     </CLASSES>
     <SOURCES />
   </library>

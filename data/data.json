@@ -12,7 +12,7 @@
           "title": "Ladytron  True Mathematics",
           "url": "https://www.youtube.com/watch?v=ZJQVte2rGBo",
           "description": "Some description",
-          "stars": 1,
+          "stars": 5,
           "comments": [
             "Mnogo qka pesen!",
             "Sucks ...",
@@ -25,7 +25,8 @@
             "sss",
             "&lt;script&gt;hack!&lt;/script&gt;",
             "s",
-            "sss"
+            "sss",
+            "sssss DASDASd"
           ]
         },
         {
@@ -38,6 +39,46 @@
             "ssss",
             "dddd"
           ]
+        },
+        {
+          "id": 423559,
+          "title": "Pesho and the Kinks",
+          "url": "https://www.youtube.com/watch?v=5rp8qGigqYk",
+          "description": "Qkata",
+          "stars": 23,
+          "comments": []
+        },
+        {
+          "id": 569502,
+          "title": "Pants Rap",
+          "url": "https://www.youtube.com/watch?v=bYOsvAJnKLE",
+          "description": "Spam",
+          "stars": 12,
+          "comments": []
+        },
+        {
+          "id": 828501,
+          "title": "Don kihote Sancho Panza",
+          "url": "https://www.youtube.com/watch?v=tp7UcFuxfM0",
+          "description": "Catchy song but ",
+          "stars": 5,
+          "comments": []
+        },
+        {
+          "id": 29478,
+          "title": "Edna Novina",
+          "url": "https://www.youtube.com/watch?v=-XHyCzzqC8E&index=3&list=PLaXFdEZIi0wf5V4X-VkYJMl0xwv_Puacd",
+          "description": "Chalga bace",
+          "stars": 0,
+          "comments": []
+        },
+        {
+          "id": 220619,
+          "title": "Kokomaniq Tine",
+          "url": "https://www.youtube.com/watch?v=Anu_L4A4heY&index=21&list=PLaXFdEZIi0wcijWHmeYLo5dcC8VRmKkSz",
+          "description": "bg estrada",
+          "stars": 0,
+          "comments": []
         }
       ],
       "comments": [],
@@ -48,10 +89,28 @@
       "passHash": "2ee115dcb37bfaaa2ddb0286bed449476eb10735",
       "usernameLower": "ivan",
       "authKey": "undefinediJZcVuMrm#opLZcf+L^loSSCX!YYj(zJT)fHNH(AT@(rpP*=LVD",
-      "availableStars": 100,
+      "availableStars": 92,
       "songs": [],
       "comments": [],
       "id": "d68dd0c7-be40-46bc-871a-d34356fd9b78"
+    },
+    {
+      "username": "sssssss",
+      "passHash": "08fc2a5826185745784e042eae42282520de97b7",
+      "usernameLower": "sssssss",
+      "authKey": "undefinedI!pLyeHoy*YeTV!EDOa_UeJS+(EnUsJz(rADlJTwehiy@bcYmBA",
+      "availableStars": 5,
+      "songs": [],
+      "id": "dfacccb8-e479-4eff-9f19-8d47e4172e83"
+    },
+    {
+      "username": "asasas",
+      "passHash": "5453d71b4ffbc8f66e8f30ade453c96eb181eeab",
+      "usernameLower": "asasas",
+      "authKey": "undefinedLq*IlmjE#B$ht_N_-=xivClHIi*nRTHF+_USZR#$ZlHGCghaNcw",
+      "availableStars": 5,
+      "songs": [],
+      "id": "454f8978-5158-46d7-ab8d-ab3d3279aa46"
     }
   ],
   "songs": [],

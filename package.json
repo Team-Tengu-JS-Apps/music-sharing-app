@@ -4,11 +4,7 @@
   "description": "Music share application",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "prestart": "npm install",
-    "preinstall": "npm install ./public --prefix ./public",
-    "install": "bower install",
-    "gulp": "gulp"
+    "start": "node app.js"
   },
   "author": "Nikolai Valkov <ndvalkov@abv.bg>",
   "contributors": [
@@ -24,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.13.3",
+    "bower": "^1.8.0",
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "lowdb": "^0.10.2",

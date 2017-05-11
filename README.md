@@ -4,6 +4,8 @@ YT Music Video Share App:
 
 #### [https://melody-underdogen.herokuapp.com/#/](https://melody-underdogen.herokuapp.com/#/)
 
+#### [Demo](https://www.youtube.com/watch?v=Li8yHSaWTCY&t=31s)
+
 ![Alt text](tengu-app.png)
 
 * Users can be registered and signed in the application
